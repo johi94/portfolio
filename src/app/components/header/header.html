@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="header__logo">
+    <!-- Logo ergänzen -->
+  </div>
+
+  <nav class="header__nav">
+    <ul class="header__menu">
+      <li><a href="#about">{{ translations[activeLang()].about }}</a></li>
+      <li><a href="#skills">{{ translations[activeLang()].skills }}</a></li>
+      <li><a href="#work">{{ translations[activeLang()].work }}</a></li>
+    </ul>
+
+    <div class="header__lang">
+      <button (click)="setLang('DE')" [class.active]="activeLang() === 'DE'">DE</button>
+      <span>/</span>
+      <button (click)="setLang('EN')" [class.active]="activeLang() === 'EN'">EN</button>
+      <span>/</span>
+      <button (click)="setLang('ESP')" [class.active]="activeLang() === 'ESP'">ESP</button>
+    </div>
+  </nav>
+</header>
