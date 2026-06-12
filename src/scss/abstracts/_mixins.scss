@@ -1,0 +1,42 @@
+@use 'variables' as *;
+@use 'breakpoints' as *;
+
+@mixin container {
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@mixin flex($justify: flex-start, $gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin nav-item {
+  font-family: $font-family-base;
+  color: $color-nav;
+  text-decoration: none;
+  transition: color 125ms ease-in-out;
+
+  &:hover {
+    color: $color-nav-hover;
+  }
+}
+
+@mixin font-size($desktop, $tablet: null, $mobile: null) {
+  font-size: $desktop;
+
+  @if $tablet {
+    @include respond(tablet) {
+      font-size: $tablet;
+    }
+  }
+
+  @if $mobile {
+    @include respond(mobile) {
+      font-size: $mobile;
+    }
+  }
+}

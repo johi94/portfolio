@@ -1,0 +1,7 @@
+@use '../abstracts/variables' as *;
+
+body {
+  margin: 0;
+  font-family: $font-family-base;
+  overflow-x: hidden;
+}

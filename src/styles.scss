@@ -1,6 +1,1 @@
-@use 'styles/variables' as *;
-
-body {
-  margin: 0;
-  font-family: $font-family-base;
-}
+@use './scss/main.scss';
