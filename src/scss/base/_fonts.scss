@@ -1,55 +1,30 @@
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-regular.woff2') format('woff2');
-}
+@use 'sass:map';
 
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-500.woff2') format('woff2');
-}
+$fonts: (
+  'Montserrat': (
+    'path': '/fonts/montserrat-v31-latin/montserrat-v31-latin',
+    'weights': (400, 500, 700),
+  ),
+  'Baloo 2': (
+    'path': '/fonts/baloo-2-v23-latin/baloo-2-v23-latin',
+    'weights': (400, 500, 700, 800),
+  ),
+);
 
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/montserrat-v31-latin/montserrat-v31-latin-700.woff2') format('woff2');
-}
+@each $family, $font in $fonts {
+  @each $weight in map.get($font, 'weights') {
+  
+    $suffix: $weight;
+    @if $weight == 400 {
+      $suffix: 'regular';
+    }
 
-@font-face {
-  font-family: 'Baloo 2';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/baloo-2-v23-latin/baloo-2-v23-latin-regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Baloo 2';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/baloo-2-v23-latin/baloo-2-v23-latin-500.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Baloo 2';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/baloo-2-v23-latin/baloo-2-v23-latin-700.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Baloo 2';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url('/fonts/baloo-2-v23-latin/baloo-2-v23-latin-800.woff2') format('woff2');
+    @font-face {
+      font-family: $family;
+      font-style: normal;
+      font-weight: $weight;
+      font-display: swap;
+      src: url('#{map.get($font, "path")}-#{$suffix}.woff2') format('woff2');
+    }
+  }
 }

@@ -3,112 +3,103 @@
 .hero {
   background: linear-gradient(115deg, $color-bg 55%, $color-bg-shade 100%);
   isolation: isolate;
-}
 
-.hero__inner {
-  @include container;
-  @include flex($gap: 64px);
-  min-height: calc(100dvh - 80px);
-  position: relative;
-}
+  &__inner {
+    @include container;
+    @include flex($gap: space('xxl'));
+    min-height: calc(100dvh - 80px);
+    position: relative;
+  }
 
-.hero__visual {
-  position: relative;
-}
+  &__visual {
+    position: relative;
 
-.hero__visual::before {
-  content: '';
-  position: absolute;
-  width: 900px;
-  height: 900px;
-  border-radius: 50%;
-  background: radial-gradient(circle, $color-nav 0%, $color-nav 50%, $color-nav-hover 100%);
-  top: -500px;
-  left: -420px;
-  z-index: -1;
-}
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1000px;
+      height: 1000px;
+      border-radius: 50%;
+      background: radial-gradient(circle, $color-nav 0%, $color-nav 50%, $color-nav-hover 100%);
+      top: -500px;
+      left: -420px;
+      z-index: -1;
+    }
+  }
 
-.hero__photo {
-  display: block;
-  width: 600px;
-  position: relative;
-  bottom: 50px;
-}
+  &__photo {
+    display: block;
+    width: 600px;
+    position: relative;
+    bottom: -10px;
+  }
 
-.hero__content {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  position: relative;
-  bottom: 100px;
-}
+  &__content {
+    @include flex-column($gap: space('xs'));
+    position: relative;
+    bottom: 100px;
+  }
 
-.hero__greeting {
-  margin: 0;
-  @include font-size(70px, 48px, 32px);
-  font-weight: 400;
-  color: $color-blue;
-}
+  &__greeting {
+    margin: 0;
+    @include font-size(rem(70px), rem(48px), rem(32px));
+    font-weight: 400;
+    color: $color-blue;
+  }
 
-.hero__title {
-  font-family: $font-family-heading;
-  margin: 0;
-  @include font-size(140px, 96px, 56px);
-  font-weight: 800;
-  line-height: 1.05;
-  color: $color-blue;
-  text-transform: uppercase;
-}
+  &__title {
+    @include font-size(rem(140px), rem(96px), rem(56px));
+    margin: 0;
+    font-family: $font-family-heading;
+    font-weight: 800;
+    line-height: 1.05;
+    color: $color-blue;
+    text-transform: uppercase;
 
-.hero__title-line {
-  display: block;
-}
+    &-line {
+      display: block;
 
-.hero__title-line--bottom {
-  @include font-size(130px, 88px, 52px);       
-}
+      &--bottom {
+        @include font-size(rem(130px), rem(88px), rem(52px));
+      }
+    }
+  }
 
-.hero__scroll {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
+  &__scroll {
+    @include flex-column(center, 12px);
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+    transform: translateX(-50%);
 
-.hero__scroll-label {
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $color-nav;
-}
+    // Vertikale Linie unter dem "Scroll"-Text
+    &::after {
+      content: '';
+      width: 2px;
+      height: 250px;
+      background: $color-nav;
+    }
 
-.hero__scroll::after {
-  content: '';
-  width: 2px;
-  height: 250px;
-  background: $color-nav;
-}
+    &-label {
+      font-size: rem(16px);
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: $color-nav;
+    }
+  }
 
-.hero__socials {
-    
-  position: absolute;
-  right: 32px;
-  bottom: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  &__socials {
+    @include list-reset;
+    @include flex-column($gap: space('m'));
+    position: absolute;
+    right: space('l');
+    bottom: space('l');
 
-.hero__socials img {
-  display: block;
-  width: 30px;
-  height: 30px;
+    img {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
 }

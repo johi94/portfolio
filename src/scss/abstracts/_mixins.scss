@@ -4,7 +4,7 @@
 @mixin container {
   max-width: $content-max-width;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 $content-padding-x;
 }
 
 @mixin flex($justify: flex-start, $gap: 0) {
@@ -14,11 +14,24 @@
   gap: $gap;
 }
 
+@mixin flex-column($align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 @mixin nav-item {
   font-family: $font-family-base;
   color: $color-nav;
   text-decoration: none;
-  transition: color 125ms ease-in-out;
+  transition: color $transition-fast;
 
   &:hover {
     color: $color-nav-hover;

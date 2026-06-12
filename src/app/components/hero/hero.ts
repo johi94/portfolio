@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Translation } from '../../services/translation';
 
 @Component({
   selector: 'app-hero',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
-export class Hero {}
+export class Hero {
+  translation = inject(Translation);
+}

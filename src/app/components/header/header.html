@@ -5,17 +5,17 @@
 
   <nav class="header__nav">
     <ul class="header__menu">
-      <li><a href="#about">{{ translations[activeLang()].about }}</a></li>
-      <li><a href="#skills">{{ translations[activeLang()].skills }}</a></li>
-      <li><a href="#work">{{ translations[activeLang()].work }}</a></li>
+      <li><a href="#about">{{ translation.t().about }}</a></li>
+      <li><a href="#skills">{{ translation.t().skills }}</a></li>
+      <li><a href="#work">{{ translation.t().work }}</a></li>
     </ul>
 
     <div class="header__lang">
-      <button (click)="setLang('DE')" [class.active]="activeLang() === 'DE'">DE</button>
+      <button (click)="translation.setLang('DE')" [class.active]="translation.activeLang() === 'DE'">DE</button>
       <span>/</span>
-      <button (click)="setLang('EN')" [class.active]="activeLang() === 'EN'">EN</button>
+      <button (click)="translation.setLang('EN')" [class.active]="translation.activeLang() === 'EN'">EN</button>
       <span>/</span>
-      <button (click)="setLang('ESP')" [class.active]="activeLang() === 'ESP'">ESP</button>
+      <button (click)="translation.setLang('ESP')" [class.active]="translation.activeLang() === 'ESP'">ESP</button>
     </div>
   </nav>
 </header>

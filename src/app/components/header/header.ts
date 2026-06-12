@@ -1,4 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Translation } from '../../services/translation';
+
 
 @Component({
   selector: 'app-header',
@@ -7,27 +9,5 @@ import { Component, signal } from '@angular/core';
   styleUrl: './header.scss',
 })
 export class Header {
-  activeLang = signal('DE');
-
-  translations: any = {
-    DE: {
-      about: 'Über mich',
-      skills: 'Fähigkeiten',
-      work: 'Meine Arbeiten'
-    },
-    EN: {
-      about: 'About me',
-      skills: 'Skill set',
-      work: 'My work'
-    },
-    ESP: {
-      about: 'Sobre mí',
-      skills: 'Habilidades',
-      work: 'Mi trabajo'
-    }
-  };
-
-  setLang(lang: string) {
-    this.activeLang.set(lang);
-  }
+  translation = inject(Translation);
 }

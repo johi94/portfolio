@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'variables' as *;
+
+
+@function rem($px) {
+  @return math.div($px, 16px) * 1rem;
+}
+
+@function space($key) {
+  @if not map.has-key($spacing, $key) {
+    @error 'Unbekannter Abstand "#{$key}". Verfügbar: #{map.keys($spacing)}';
+  }
+  @return map.get($spacing, $key);
+}

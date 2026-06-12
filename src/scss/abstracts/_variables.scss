@@ -1,3 +1,4 @@
+
 $font-family-base: 'Montserrat', sans-serif;
 $font-family-heading: 'Baloo 2', $font-family-base;
 
@@ -9,3 +10,15 @@ $color-nav-hover: $color-blue-dark;
 $color-bg-shade: #eaf0ff;
 
 $content-max-width: 1440px;
+$content-padding-x: 32px;
+
+$spacing: (
+  'xs': 8px,
+  's': 16px,
+  'm': 24px,
+  'l': 32px,
+  'xl': 48px,
+  'xxl': 64px,
+);
+
+$transition-fast: 125ms ease-in-out;
