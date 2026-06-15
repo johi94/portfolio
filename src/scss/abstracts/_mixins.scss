@@ -53,3 +53,21 @@
     }
   }
 }
+
+@mixin button {
+  display: inline-block;            
+  padding: $btn-padding;                 
+  border: $border-width $color-blue;    
+  border-radius: $radius;               
+  color: $color-blue;               
+  background-color: $btn-bg;            
+  font-family: $font-family-base;
+  text-decoration: none;            
+  cursor: pointer;
+  transition: $transition-fast;                
+
+  &:hover {
+    background-color: $color-blue; 
+    color: $color-bg;
+  }
+}

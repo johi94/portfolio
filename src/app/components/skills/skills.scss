@@ -1,0 +1,48 @@
+@use '../../../scss/abstracts' as *;
+
+.skills {
+  background: linear-gradient(115deg, $color-blue 55%, $color-blue-dark 100%);
+
+  &__inner {
+    @include container;
+    padding-block: space('xxl');           
+  }
+
+  &__title {
+    @include font-size(rem(80px), rem(56px), rem(40px));
+    text-align: center;
+    color: $color-bg; 
+    margin-top: space('xs');                  
+    margin-bottom: space('xxl');
+  }
+
+  &__grid {
+    @include list-reset;          
+    display: flex;
+    flex-wrap: wrap;               
+    justify-content: center;         
+    gap: space('l');   
+  }                  
+
+  &__icon {
+    height: rem(80px);       
+    width: auto;             
+    display: block;
+    transition: $transition-fast;
+    &:hover {
+      transform: translateY(-6px) scale(1.1);
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+    }
+     
+  }
+
+  &__item {
+    @include flex-column($align: center, $gap: space('xs'));
+    flex: 0 0 calc((100% - 5 * #{space('l')}) / 6);
+  }
+
+  &__name {
+    margin-top: space('xs');
+    color: $color-bg;
+  }
+}

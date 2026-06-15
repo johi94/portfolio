@@ -8,11 +8,16 @@ $color-blue-dark: #0043f0;
 $color-nav: $color-blue;
 $color-nav-hover: $color-blue-dark;
 $color-bg-shade: #eaf0ff;
+$btn-bg: transparent;
 
 $content-max-width: 1440px;
 $content-padding-x: 32px;
+$btn-padding: 16px 16px;
+$border-width: 2px solid;
+$radius: 8px;
 
 $spacing: (
+  'xxs': 4px,
   'xs': 8px,
   's': 16px,
   'm': 24px,

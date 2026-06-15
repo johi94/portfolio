@@ -1,0 +1,67 @@
+@use '../../../scss/abstracts' as *;
+
+.about {
+  &__inner {
+    @include container;
+    @include flex($justify: center, $gap: space('xl'));
+    padding-block: space('xxl');
+  }
+
+  &__intro {
+    @include flex-column($gap: space('l'));
+  }
+
+  &__intro,
+  &__text {
+    flex: 1;
+  }
+
+  &__title {
+    @include font-size(rem(120px), rem(80px), rem(40px));
+    padding-left: space('xl');
+    margin: 0;
+    font-family: $font-family-heading;
+    font-weight: 700;
+    line-height: 1.05;
+    color: $color-blue;
+  }
+
+  &__subtitle {
+    @include font-size(rem(45px), rem(32px), rem(24px));
+    margin: 0;
+    font-family: $font-family-heading;
+    font-weight: 700;
+    color: $color-blue;
+    text-align: center;
+  }
+
+  &__facts {
+    @include flex($justify: flex-start, $gap: space('xxl'));
+    @include list-reset;
+    justify-content: center;
+  }
+
+  &__fact {
+    @include flex($justify: flex-start, $gap: space('s'));
+    span {
+      color: $color-blue;
+      max-width: 10ch;
+    }
+
+    img {
+      height: rem(48px);
+      width: auto;
+    }
+  }
+
+  &__text {
+    p {
+      line-height: 1.6;
+    }
+  }
+
+  &__cta {
+    @include button;
+    @include font-size(rem(24px), rem(16px));
+  }
+}
