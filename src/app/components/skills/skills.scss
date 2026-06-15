@@ -1,7 +1,7 @@
 @use '../../../scss/abstracts' as *;
 
 .skills {
-  background: linear-gradient(115deg, $color-blue 55%, $color-blue-dark 100%);
+  background: $gradient-blue;
 
   &__inner {
     @include container;
@@ -18,11 +18,21 @@
 
   &__grid {
     @include list-reset;          
-    display: flex;
+    @include flex($justify: center, $gap: space('l'));
     flex-wrap: wrap;               
-    justify-content: center;         
-    gap: space('l');   
-  }                  
+  }    
+  
+  &__item {
+  @include flex-column($align: center, $gap: space('s'));
+  flex: 0 0 calc((100% - 5 * #{space('l')}) / 6);         
+
+  @include respond('tablet') {
+    flex: 0 0 calc((100% - 3 * #{space('l')}) / 4);         
+  }
+   @include respond('mobile') {
+    flex: 0 0 calc((100% - 1 * #{space('l')}) / 2);         
+  }
+}
 
   &__icon {
     height: rem(80px);       
@@ -32,17 +42,11 @@
     &:hover {
       transform: translateY(-6px) scale(1.1);
       filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
-    }
-     
-  }
-
-  &__item {
-    @include flex-column($align: center, $gap: space('xs'));
-    flex: 0 0 calc((100% - 5 * #{space('l')}) / 6);
+    }  
   }
 
   &__name {
-    margin-top: space('xs');
     color: $color-bg;
+    @include font-size(rem(16px));
   }
 }

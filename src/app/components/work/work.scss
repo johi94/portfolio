@@ -1,0 +1,90 @@
+@use '../../../scss/abstracts' as *;
+
+.work {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  &__inner {
+    @include container;
+    padding-block: space('xxl');
+  }
+  &__title {
+    @include font-size(rem(96px), rem(56px), rem(40px));
+    font-family: $font-family-heading;
+    text-align: start;
+    color: $color-blue;
+    margin-top: space('xl');
+    margin-bottom: space('xs');
+  }
+  &__subtitle {
+    @include font-size(rem(24px), rem(20px), rem(16px));
+    max-width: rem(580px);
+    margin-bottom: space('xl');
+  }
+  &__list {
+    @include list-reset;
+    @include flex-column($gap: space('xxl'));
+  }
+  &__item {
+    @include flex($gap: space('xxl'));
+    align-items: stretch;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      text-align: right;
+      .work__btn {
+        .work__btn { align-self: flex-end; }
+      }
+    }
+  }
+
+  &__image {
+    width: 50%;
+    height: rem(400px);
+    object-fit: cover;
+    display: block;
+    border-radius: $radius;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+  &__info {
+    @include flex-column($gap: space('xxs'));
+    flex: 1;
+  }
+  &__name {
+    @include font-size(rem(40px), rem(32px), rem(24px));
+    font-family: $font-family-heading;
+    color: $color-blue;
+    margin-top: auto;
+  }
+  &__tech {
+    @include font-size(rem(24px), rem(18px));
+    color: $color-blue;
+    margin: 0;
+  }
+  &__description {
+    @include font-size(rem(16px));
+  }
+  &__btn {
+    @include button;
+    align-self: flex-start;
+  }
+  &__circle {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__circle--1 {
+    @include decorative-circle(rem(110px)); top: rem(60px); left: rem(800px)
+  }
+
+  &__circle--2 {
+  @include decorative-circle(rem(180px)); top: rem(150px); right: rem(200px)   
+}
+
+&__circle--3 {
+    @include decorative-circle(rem(400px)); top: rem(700px); left: rem(-250px)     
+}
+
+&__circle--4 {
+    @include decorative-circle(rem(250px)); top: rem(850px); right: rem(-140px)
+}
+}

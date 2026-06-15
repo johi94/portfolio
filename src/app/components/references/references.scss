@@ -1,0 +1,48 @@
+@use '../../../scss/abstracts' as *;
+
+.references {
+  background: $gradient-blue;
+  &__inner {
+    @include container;
+    padding-bottom: space('xxl');
+  }
+  &__title {
+    @include font-size(rem(48px), rem(32px), rem(24px));
+    font-family: $font-family-heading;
+    text-align: center;
+    color: $color-bg;
+    padding-top: space('xl');
+    margin-bottom: 0;
+  }
+  &__subtitle {
+    @include font-size(rem(32px), rem(24px), rem(16px));
+    text-align: center;
+    color: $color-bg;
+    margin-top: 0;
+    margin-bottom: space('l');
+  }
+  &__list {
+    @include list-reset;
+    @include flex($justify: flex-start, $gap: space('xl'));
+    margin-top: 0;
+    align-items: flex-start; 
+    
+  }
+  &__item {
+    @include flex-column($align: stretch, $gap: space('xxs'));
+    flex: 1; 
+    color: $color-bg;
+  }
+  &__name {
+    @include font-size(rem(24px), rem(16px));
+    margin: 0;
+  }
+  &__project {
+    @include font-size(rem(16px));
+    opacity: 0.7;
+    margin-top: 0;
+  }
+  &__quote {
+    text-align: left;
+  }
+}

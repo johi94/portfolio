@@ -3,6 +3,7 @@
 .hero {
   background: linear-gradient(115deg, $color-bg 55%, $color-bg-shade 100%);
   isolation: isolate;
+  
 
   &__inner {
     @include container;
@@ -17,10 +18,7 @@
     &::before {
       content: '';
       position: absolute;
-      width: 1000px;
-      height: 1000px;
-      border-radius: 50%;
-      background: radial-gradient(circle, $color-nav 0%, $color-nav 50%, $color-nav-hover 100%);
+      @include decorative-circle(1000px);
       top: -500px;
       left: -420px;
       z-index: -1;
@@ -71,8 +69,6 @@
     bottom: 0;
     left: 75%;
     transform: translateX(-50%);
-
-    // Vertikale Linie unter dem "Scroll"-Text
     &::after {
       content: '';
       width: 2px;

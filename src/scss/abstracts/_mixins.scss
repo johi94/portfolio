@@ -71,3 +71,10 @@
     color: $color-bg;
   }
 }
+
+ @mixin decorative-circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, $color-blue, $color-blue-dark);
+}

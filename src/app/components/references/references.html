@@ -1,0 +1,16 @@
+<section class="references" id="references">
+  <div class="references__inner">
+    <h2 class="references__title">{{ translation.t().refTitle }}</h2>
+    <p class="references__subtitle">{{ translation.t().refSubtitle }}</p>
+
+    <ul class="references__list">
+      @for (reference of references; track reference.name) {
+        <li class="references__item">
+          <h3 class="references__name">{{ reference.name }}</h3>
+          <p class="references__project">{{ reference.project }}</p>
+          <p class="references__quote">{{ translation.t()[reference.quoteKey] }}</p>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

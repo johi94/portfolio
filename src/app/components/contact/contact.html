@@ -1,0 +1,19 @@
+
+<section class="contact" id="contact">
+  <div class="contact__inner">
+   
+
+    <form class="contact__form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <input class="contact__input" type="text" formControlName="name" placeholder="Your name" />
+      <input class="contact__input" type="email" formControlName="email" placeholder="Your email" />
+      <textarea class="contact__input" formControlName="message" placeholder="Your message"></textarea>
+
+      <label class="contact__privacy">
+        <input type="checkbox" formControlName="privacy" />
+        <span>I've read the privacy policy and agree to the processing of my data.</span>
+      </label>
+
+      <button class="contact__btn" type="submit" [disabled]="contactForm.invalid">Say hello ;)</button>
+    </form>
+  </div>
+</section>

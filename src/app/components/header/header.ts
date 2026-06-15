@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, HostListener } from '@angular/core';
 import { Translation } from '../../services/translation';
 
 
@@ -10,4 +10,10 @@ import { Translation } from '../../services/translation';
 })
 export class Header {
   translation = inject(Translation);
+  isScrolled = signal(false);
+
+  @HostListener('window:scroll')
+  onScroll() {
+    this.isScrolled.set(window.scrollY > 0);
+  }
 }

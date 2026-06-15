@@ -4,8 +4,16 @@
   @include container;
   @include flex(space-between);
   padding: space('s') space('l');
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1;
+  transition: background-color $transition-fast;
+  &--scrolled {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+  
 
   &__logo-img {
     display: block;
