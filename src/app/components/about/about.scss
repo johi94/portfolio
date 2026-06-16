@@ -24,6 +24,7 @@
     font-weight: 700;
     line-height: 1.05;
     color: $color-blue;
+    white-space: pre-line;
   }
 
   &__subtitle {
@@ -58,10 +59,5 @@
     p {
       line-height: 1.6;
     }
-  }
-
-  &__cta {
-    @include button;
-    @include font-size(rem(24px), rem(16px));
   }
 }

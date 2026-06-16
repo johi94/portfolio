@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Translation, type TextKey } from '../../services/translation';
+import { Button } from '../button/button';
 
 interface Project {
   title: string;
@@ -11,7 +12,7 @@ interface Project {
 
 @Component({
   selector: 'app-work',
-  imports: [],
+  imports: [Button],
   templateUrl: './work.html',
   styleUrl: './work.scss',
 })

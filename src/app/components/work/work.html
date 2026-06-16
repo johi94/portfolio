@@ -18,9 +18,7 @@
             <h3 class="work__name">{{ project.title }}</h3>
             <p class="work__tech">{{ project.tech.join(' | ') }}</p>
             <p class="work__description">{{ translation.t()[project.descriptionKey] }}</p>
-            <a [href]="project.githubUrl" class="work__btn" target="_blank" rel="noopener"
-              >Github</a
-            >
+            <app-button [href]="" target="_blank" size="large">Github</app-button>
           </div>
         </li>
       }

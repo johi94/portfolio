@@ -31,9 +31,6 @@
     &:nth-child(even) {
       flex-direction: row-reverse;
       text-align: right;
-      .work__btn {
-        .work__btn { align-self: flex-end; }
-      }
     }
   }
 
@@ -63,28 +60,32 @@
   &__description {
     @include font-size(rem(16px));
   }
-  &__btn {
-    @include button;
-    align-self: flex-start;
-  }
   &__circle {
     position: absolute;
     z-index: -1;
   }
 
   &__circle--1 {
-    @include decorative-circle(rem(110px)); top: rem(60px); left: rem(800px)
+    @include decorative-circle(rem(110px));
+    top: rem(60px);
+    left: rem(800px);
   }
 
   &__circle--2 {
-  @include decorative-circle(rem(180px)); top: rem(150px); right: rem(200px)   
-}
+    @include decorative-circle(rem(180px));
+    top: rem(150px);
+    right: rem(200px);
+  }
 
-&__circle--3 {
-    @include decorative-circle(rem(400px)); top: rem(700px); left: rem(-250px)     
-}
+  &__circle--3 {
+    @include decorative-circle(rem(400px));
+    top: rem(700px);
+    left: rem(-250px);
+  }
 
-&__circle--4 {
-    @include decorative-circle(rem(250px)); top: rem(850px); right: rem(-140px)
-}
+  &__circle--4 {
+    @include decorative-circle(rem(250px));
+    top: rem(850px);
+    right: rem(-140px);
+  }
 }

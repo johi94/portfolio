@@ -1,0 +1,22 @@
+<ng-template #content><ng-content></ng-content></ng-template>
+
+@if (href()) {
+  <a
+    class="btn"
+    [href]="href()"
+    [target]="target()"
+    [rel]="target() === '_blank' ? 'noopener noreferrer' : null"
+    [class.btn--large]="size() === 'large'"
+  >
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </a>
+} @else {
+  <button
+    class="btn"
+    [type]="type()"
+    [disabled]="disabled()"
+    [class.btn--large]="size() === 'large'"
+  >
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </button>
+}

@@ -55,7 +55,8 @@
 }
 
 @mixin button {
-  display: inline-block;            
+  display: inline-block;  
+  text-align: center;          
   padding: $btn-padding;                 
   border: $border-width $color-blue;    
   border-radius: $radius;               

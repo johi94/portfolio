@@ -3,13 +3,17 @@ $font-family-base: 'Montserrat', sans-serif;
 $font-family-heading: 'Baloo 2', $font-family-base;
 
 $color-bg: #ffffff;
+$color-blk: black;
 $color-blue: #5988ff;
 $color-blue-dark: #0043f0;
 $color-nav: $color-blue;
 $color-nav-hover: $color-blue-dark;
 $color-bg-shade: #eaf0ff;
 $btn-bg: transparent;
+$color-error: #d92d20;
 $gradient-blue: linear-gradient(115deg, $color-blue 55%, $color-blue-dark 100%);
+$gradient-bg: linear-gradient(115deg, $color-bg 55%, $color-bg-shade 100%);
+
 
 $content-max-width: 1440px;
 $content-padding-x: 32px;
@@ -25,6 +29,7 @@ $spacing: (
   'l': 32px,
   'xl': 48px,
   'xxl': 64px,
+  'xxxl': 128px
 );
 
 $transition-fast: 125ms ease-in-out;

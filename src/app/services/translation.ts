@@ -8,7 +8,7 @@ const de = {
   work: 'Meine Arbeiten',
   greeting: 'Hallo! Ich bin Jonas',
   scroll: 'Scrollen',
-  aboutTitle: 'Lassen Sie uns zusammen­arbeiten',
+  aboutTitle: 'Lassen Sie uns zusammen\narbeiten',
   aboutSubtitle: 'Ich',
   aboutFactLocation: 'wohne in Puebla',
   aboutFactRemote: 'bin offen für Remote-Arbeit',
@@ -32,6 +32,24 @@ const de = {
     '„Jonas ist ein vertrauenswürdiger Teamplayer, der auch unter Termindruck ruhig bleibt. Strukturierte Arbeit und klare Kommunikation."',
   refQuoteNoah:
     '„Jonas entwickelt durchdacht und arbeitet gut mit dem Team zusammen. Zuverlässig, freundlich und immer hilfsbereit."',
+  contactNamePlaceholder: 'Dein Name',
+  contactEmailPlaceholder: 'Deine E-Mail',
+  contactMessagePlaceholder: 'Deine Nachricht',
+  contactPrivacyBefore: 'Ich habe die ',
+  contactPrivacyLink: 'Datenschutzerklärung',
+  contactPrivacyAfter: ' gelesen und stimme der Verarbeitung meiner Daten zu.',
+  contactSend: 'Sag hallo ;)',
+  contactErrName: 'Bitte gib deinen Namen ein',
+  contactErrEmailRequired: 'E-Mail ist erforderlich',
+  contactErrEmailInvalid: 'Bitte eine gültige E-Mail eingeben',
+  contactErrMessage: 'Bitte gib eine Nachricht ein',
+  contactErrPrivacy: 'Bitte akzeptiere die Datenschutzerklärung',
+  contactTitle: 'Kontakt',
+  contactProblem: 'Du hast ein Problem zu lösen?',
+  contactText:
+    'Schreib mir gerne über das Formular. Ich melde mich so schnell wie möglich bei dir.',
+  contactMe: 'Brauchst du einen Frontend-Entwickler?',
+  contactMeAccent: 'Kontaktiere mich!',
 };
 
 export type Texts = typeof de;
@@ -68,7 +86,24 @@ const translations: Record<Lang, Texts> = {
     refQuoteEvelyn:
       '"Jonas is a trustworthy team player who stays calm under deadline pressure. Structured work and clear communication."',
     refQuoteNoah:
-      '"Jonas develops thoughtfully and collaborates well with the team. Reliable, friendly and always willing to help."'
+      '"Jonas develops thoughtfully and collaborates well with the team. Reliable, friendly and always willing to help."',
+    contactNamePlaceholder: 'Your name',
+    contactEmailPlaceholder: 'Your email',
+    contactMessagePlaceholder: 'Your message',
+    contactPrivacyBefore: 'I have read the ',
+    contactPrivacyLink: 'privacy policy',
+    contactPrivacyAfter: ' and agree to the processing of my data.',
+    contactSend: 'Say hello ;)',
+    contactErrName: 'Please enter your name',
+    contactErrEmailRequired: 'Email is required',
+    contactErrEmailInvalid: 'Please enter a valid email',
+    contactErrMessage: 'Please enter a message',
+    contactErrPrivacy: 'Please accept the privacy policy',
+    contactTitle: 'Contact',
+    contactProblem: 'Got a problem to solve?',
+    contactText: "Drop me a message via the form. I'll get back to you as soon as possible.",
+    contactMe: 'Need a Frontend developer?',
+    contactMeAccent: 'Contact me!',
   },
   ESP: {
     about: 'Sobre mí',
@@ -99,7 +134,24 @@ const translations: Record<Lang, Texts> = {
     refQuoteEvelyn:
       '«Jonas es un compañero de equipo de confianza que mantiene la calma bajo la presión de los plazos. Trabajo estructurado y comunicación clara.»',
     refQuoteNoah:
-      '«Jonas desarrolla con criterio y colabora bien con el equipo. Fiable, amable y siempre dispuesto a ayudar.»'
+      '«Jonas desarrolla con criterio y colabora bien con el equipo. Fiable, amable y siempre dispuesto a ayudar.»',
+    contactNamePlaceholder: 'Tu nombre',
+    contactEmailPlaceholder: 'Tu correo',
+    contactMessagePlaceholder: 'Tu mensaje',
+    contactPrivacyBefore: 'He leído la ',
+    contactPrivacyLink: 'política de privacidad',
+    contactPrivacyAfter: ' y acepto el tratamiento de mis datos.',
+    contactSend: 'Saluda ;)',
+    contactErrName: 'Introduce tu nombre',
+    contactErrEmailRequired: 'El correo es obligatorio',
+    contactErrEmailInvalid: 'Introduce un correo válido',
+    contactErrMessage: 'Escribe un mensaje',
+    contactErrPrivacy: 'Acepta la política de privacidad',
+    contactTitle: 'Contacto',
+    contactProblem: '¿Tienes un problema para resolver?',
+    contactText: 'Escríbeme a través del formulario y te responderé lo antes posible.',
+    contactMe: '¿Necesitas un desarrollador frontend?',
+    contactMeAccent: '¡Contáctame!'
   },
 };
 

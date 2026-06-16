@@ -1,7 +1,7 @@
 @use '../../../scss/abstracts' as *;
 
 .hero {
-  background: linear-gradient(115deg, $color-bg 55%, $color-bg-shade 100%);
+  background: $gradient-bg;
   isolation: isolate;
   
 

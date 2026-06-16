@@ -1,0 +1,8 @@
+@use '../../../scss/abstracts' as *;
+
+.btn {
+  @include button;
+}
+.btn--large {
+  @include font-size(rem(24px), rem(16px));
+}

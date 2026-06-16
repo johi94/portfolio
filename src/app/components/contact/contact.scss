@@ -1,0 +1,102 @@
+@use '../../../scss/abstracts' as *;
+
+.contact {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: $gradient-bg;
+  &__inner {
+    @include container;
+    padding-top: space('xxl');
+    padding-bottom: space('xxxl');
+  }
+  &__columns {
+    @include flex($justify: space-between, $gap: space('xxl'));
+    align-items: flex-start;
+  }
+  &__intro {
+    @include flex-column($align: stretch, $gap: space('xxs'));
+  }
+  &__label {
+    @include font-size(rem(96px), rem(56px), rem(40px));
+    font-family: $font-family-heading;
+    color: $color-blue;
+  }
+  &__problem {
+    @include font-size(rem(32px), rem(24px), rem(20px));
+    color: $color-blue;
+    font-weight: 700;
+    margin-top: 0;
+  }
+  &__text {
+    @include font-size(rem(16px));
+    max-width: rem(520px);
+    line-height: 1.5;
+  }
+  &__contactme {
+    @include font-size(rem(16px));
+    color: $color-blue;
+  }
+  &__accent {
+    @include font-size(rem(16px));
+    font-family: $font-family-heading;
+    color: $color-blue-dark;
+    font-weight: 700;
+  }
+  &__form {
+    @include flex-column($gap: space('s'));
+    flex: 1;
+  }
+  &__group {
+    @include flex-column($gap: space('s'));
+  }
+  &__input {
+    width: 100%;
+    padding: space('s');
+    border: $border-width $color-blue;
+    border-radius: $radius;
+    background: $color-bg;
+    font-family: $font-family-base;
+    font-size: rem(16px);
+    color: $color-blk;
+
+    &::placeholder {
+      color: $color-blk;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-blue-dark;
+    }
+
+    &__message {
+      min-height: rem(160px);
+      resize: vertical;
+    }
+  }
+
+  &__error {
+    color: $color-error;
+    @include font-size(rem(16px));
+    margin: 0;
+  }
+
+  &__privacy {
+    @include font-size(rem(16px));
+  }
+  &__link {
+    color: $color-blue;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  &__circle {
+    position: absolute;
+    z-index: -1;
+    @include decorative-circle(rem(200px));
+    top: rem(650px);
+    left: rem(250px);
+  }
+}
