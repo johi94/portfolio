@@ -1,22 +1,34 @@
-import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, Validators, ReactiveFormsModule, AbstractControl, ValidationErrors } from '@angular/forms';
+import { Component, inject, signal } from '@angular/core';
+import {
+  FormControl,
+  FormGroup,
+  Validators,
+  ReactiveFormsModule,
+  AbstractControl,
+  ValidationErrors,
+} from '@angular/forms';
 import { Translation } from '../../services/translation';
 import { Button } from '../button/button';
+import { ScrollTop } from '../scroll-top/scroll-top';
+import { HttpClient } from '@angular/common/http';
 
 function noWhitespace(control: AbstractControl): ValidationErrors | null {
   const value = control.value as string;
+  if (!value) return null;          
   return value.trim().length === 0 ? { whitespace: true } : null;
 }
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, Button],
+  imports: [ReactiveFormsModule, Button, ScrollTop],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-
 export class Contact {
+  status = signal<'idle' | 'sending' | 'success' | 'error'>('idle');
   translation = inject(Translation);
+  private http = inject(HttpClient);
+  private readonly accessKey = '85e3880e-f07c-44cd-86aa-8319f3a191de';
 
   contactForm = new FormGroup({
     userForm: new FormGroup({
@@ -32,16 +44,22 @@ export class Contact {
     }),
     privacy: new FormControl(false, {
       validators: [Validators.requiredTrue],
-    })
+    }),
   });
 
   onSubmit() {
-    if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
-    }
-  }
+  if (this.contactForm.invalid) return;
+  this.status.set('sending');
 
-  untouch() {
-    this.contactForm.markAsUntouched();
-  }
+  const { userForm, message } = this.contactForm.getRawValue();
+  const payload = { access_key: this.accessKey, name: userForm.name, email: userForm.email, message };
+
+  this.http.post('https://api.web3forms.com/submit', payload).subscribe({
+    next: () => {
+      this.status.set('success');
+      this.contactForm.reset();      
+    },
+    error: () => this.status.set('error'),
+  });
+}
 }

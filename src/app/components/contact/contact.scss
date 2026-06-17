@@ -9,6 +9,7 @@
     @include container;
     padding-top: space('xxl');
     padding-bottom: space('xxxl');
+    position: relative;   
   }
   &__columns {
     @include flex($justify: space-between, $gap: space('xxl'));
@@ -44,12 +45,28 @@
     font-weight: 700;
   }
   &__form {
-    @include flex-column($gap: space('s'));
+    @include flex-column($gap: space('xxs'));
     flex: 1;
   }
-  &__group {
-    @include flex-column($gap: space('s'));
+  &__send {
+    align-self: center;
   }
+  &__group {
+    @include flex-column($gap: space('xxs'));
+  }
+
+  &__field {
+  position: relative;
+  margin-bottom: space('m');   
+}
+&__field &__input {
+  margin-bottom: 0;            
+}
+&__field &__error {
+  position: absolute;
+  top: 100%;                   
+}
+
   &__input {
     width: 100%;
     padding: space('s');
@@ -59,8 +76,10 @@
     font-family: $font-family-base;
     font-size: rem(16px);
     color: $color-blk;
+    margin-bottom: space('m'); 
 
     &::placeholder {
+      @include font-size(rem(16px));
       color: $color-blk;
     }
 
@@ -78,6 +97,7 @@
   &__error {
     color: $color-error;
     @include font-size(rem(16px));
+    min-height: space('s');
     margin: 0;
   }
 
@@ -89,14 +109,43 @@
     text-decoration: none;
     &:hover {
       cursor: pointer;
+      color: $color-blue-dark;
+    }
+  }
+
+    &__feedback {
+    @include font-size(rem(16px));
+    text-align: center;
+    margin: 0;
+
+    &--sending {
+      color: $color-blk;
+    }
+    &--success {
+      color: $color-blue;
+    }
+    &--error {
+      color: $color-error;
     }
   }
   
-  &__circle {
+    &__circle {
     position: absolute;
     z-index: -1;
+  }
+  &__circle--1 {
+    @include decorative-circle(rem(130px));
+    top: rem(50px);
+    right: rem(500px);
+  }
+  &__circle--2 {
+    @include decorative-circle(rem(70px));
+    bottom: rem(60px);
+    right: rem(20px);
+  }
+  &__circle--3 {
     @include decorative-circle(rem(200px));
-    top: rem(650px);
-    left: rem(250px);
+    bottom: rem(160px);
+    left: rem(160px);
   }
 }

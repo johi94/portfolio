@@ -1,8 +1,10 @@
 <section class="contact" id="contact">
-  <span class="contact__circle" aria-hidden="true"></span>
-  <div class="contact__inner">
+<div class="contact__inner">
+  <span class="contact__circle contact__circle--1" aria-hidden="true"></span>
+  <span class="contact__circle contact__circle--2" aria-hidden="true"></span>
+  <span class="contact__circle contact__circle--3" aria-hidden="true"></span>
+  
     <h2 class="contact__label">{{ translation.t().contactTitle }}</h2>
-
     <div class="contact__columns">
       <div class="contact__intro">
         <h3 class="contact__problem">{{ translation.t().contactProblem }}</h3>
@@ -12,61 +14,99 @@
           <span class="contact__accent"> {{ translation.t().contactMeAccent }}</span>
         </p>
       </div>
-
       <form class="contact__form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="contact__group" formGroupName="userForm">
-          <input
-            class="contact__input"
-            type="text"
-            formControlName="name"
-            [placeholder]="translation.t().contactNamePlaceholder"
-          />
-          @let nameCtrl = contactForm.controls.userForm.controls.name;
-          @if (nameCtrl.touched && nameCtrl.invalid) {
-            <p class="contact__error">{{ translation.t().contactErrName }}</p>
-          }
-          <input
-            class="contact__input"
-            type="email"
-            formControlName="email"
-            [placeholder]="translation.t().contactEmailPlaceholder"
-          />
-          @let emailCtrl = contactForm.controls.userForm.controls.email;
-          @if (emailCtrl.touched && emailCtrl.invalid) {
-            @if (emailCtrl.hasError('required')) {
-              <p class="contact__error">{{ translation.t().contactErrEmailRequired }}</p>
-            }
-            @if (emailCtrl.hasError('email')) {
-              <p class="contact__error">{{ translation.t().contactErrEmailInvalid }}</p>
-            }
-          }
+          <div class="contact__field">
+            <input
+              class="contact__input"
+              type="text"
+              formControlName="name"
+              [placeholder]="translation.t().contactNamePlaceholder"
+            />
+            @let nameCtrl = contactForm.controls.userForm.controls.name;
+            <p class="contact__error contact__error--tall">
+              @if (nameCtrl.touched && nameCtrl.invalid) {
+                {{ translation.t().contactErrName }}
+              }
+            </p>
+          </div>
+          <div class="contact__field">
+            <input
+              class="contact__input"
+              type="email"
+              formControlName="email"
+              [placeholder]="translation.t().contactEmailPlaceholder"
+            />
+            @let emailCtrl = contactForm.controls.userForm.controls.email;
+            <p class="contact__error">
+              @if (emailCtrl.touched && emailCtrl.invalid) {
+                @if (emailCtrl.hasError('required')) {
+                  {{ translation.t().contactErrEmailRequired }}
+                }
+                @if (emailCtrl.hasError('email')) {
+                  {{ translation.t().contactErrEmailInvalid }}
+                }
+              }
+            </p>
+          </div>
         </div>
-        <textarea
-          class="contact__input contact__input__message"
-          formControlName="message"
-          [placeholder]="translation.t().contactMessagePlaceholder"
-        ></textarea>
-        @let messageCtrl = contactForm.controls.message;
-        @if (messageCtrl.touched && messageCtrl.invalid) {
-          <p class="contact__error">{{ translation.t().contactErrMessage }}</p>
-        }
-
-        <label class="contact__privacy">
-          <input type="checkbox" formControlName="privacy" />
-          <span
-            >{{ translation.t().contactPrivacyBefore
-            }}<a class="contact__link" href="#">{{ translation.t().contactPrivacyLink }}</a
-            >{{ translation.t().contactPrivacyAfter }}</span
-          >
-        </label>
-        @let privacyCtrl = contactForm.controls.privacy;
-        @if (privacyCtrl.touched && privacyCtrl.invalid) {
-          <p class="contact__error">{{ translation.t().contactErrPrivacy }}</p>
-        }
-        <app-button type="submit" [disabled]="contactForm.invalid" (click)="untouch()">
+        <div class="contact__field">
+          <textarea
+            class="contact__input contact__input__message"
+            formControlName="message"
+            [placeholder]="translation.t().contactMessagePlaceholder"
+          ></textarea>
+          @let messageCtrl = contactForm.controls.message;
+          <p class="contact__error">
+            @if (messageCtrl.touched && messageCtrl.invalid) {
+              {{ translation.t().contactErrMessage }}
+            }
+          </p>
+        </div>
+        <div class="contact__field">
+          <label class="contact__privacy">
+            <input type="checkbox" formControlName="privacy" />
+            <span
+              >{{ translation.t().contactPrivacyBefore
+              }}<a class="contact__link" href="#">{{ translation.t().contactPrivacyLink }}</a
+              >{{ translation.t().contactPrivacyAfter }}</span
+            >
+          </label>
+          @let privacyCtrl = contactForm.controls.privacy;
+          <p class="contact__error">
+            @if (privacyCtrl.touched && privacyCtrl.invalid) {
+              {{ translation.t().contactErrPrivacy }}
+            }
+          </p>
+        </div>
+        <app-button
+          class="contact__send"
+          type="submit"
+          [disabled]="contactForm.invalid || status() === 'sending'"
+          size="large"
+        >
           {{ translation.t().contactSend }}
         </app-button>
+
+        @switch (status()) {
+          @case ('sending') {
+            <p class="contact__feedback contact__feedback--sending">
+              {{ translation.t().contactSending }}
+            </p>
+          }
+          @case ('success') {
+            <p class="contact__feedback contact__feedback--success">
+              {{ translation.t().contactSuccess }}
+            </p>
+          }
+          @case ('error') {
+            <p class="contact__feedback contact__feedback--error">
+              {{ translation.t().contactError }}
+            </p>
+          }
+        }
       </form>
     </div>
+    <app-scroll-top></app-scroll-top>
   </div>
 </section>

@@ -3,7 +3,6 @@
 .hero {
   background: $gradient-bg;
   isolation: isolate;
-  
 
   &__inner {
     @include container;
@@ -29,7 +28,7 @@
     display: block;
     width: 600px;
     position: relative;
-    bottom: -10px;
+    bottom: -20px;
   }
 
   &__content {
@@ -97,5 +96,9 @@
       width: 30px;
       height: 30px;
     }
+  }
+  &__social {
+    display: block;
+    @include hover-lift (0.1);
   }
 }

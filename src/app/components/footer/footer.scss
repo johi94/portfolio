@@ -1,0 +1,43 @@
+@use '../../../scss/abstracts' as *;
+
+.footer {
+  background: $gradient-blue;
+
+  &__inner {
+    @include container;
+    @include flex($justify: space-between);
+    padding-block: space('xl');
+  }
+
+  &__center {
+    @include flex-column($align: center, $gap: space('xs'));
+  }
+  &__copyright {
+    @include font-size(rem(16px));
+    color: $color-bg;
+    margin: 0;
+  }
+  &__legal {
+    @include font-size(rem(14px));
+    color: $color-bg;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__socials {
+    @include list-reset;
+    @include flex($gap: space('s'));
+  }
+  &__social {
+    display: block;
+    @include hover-lift;
+  }
+  &__social-icon {
+    width: rem(30px);
+    height: auto;
+    display: block;
+    filter: brightness(0) invert(1);   
+  }
+}

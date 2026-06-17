@@ -50,6 +50,10 @@ const de = {
     'Schreib mir gerne über das Formular. Ich melde mich so schnell wie möglich bei dir.',
   contactMe: 'Brauchst du einen Frontend-Entwickler?',
   contactMeAccent: 'Kontaktiere mich!',
+  contactSending: 'Wird gesendet …',
+  contactSuccess: 'Danke! Deine Nachricht ist angekommen, ich melde mich bald.',
+  contactError: 'Ups, das hat nicht geklappt. Bitte versuch es später noch einmal.',
+  footerLegal: 'Impressum'
 };
 
 export type Texts = typeof de;
@@ -104,7 +108,12 @@ const translations: Record<Lang, Texts> = {
     contactText: "Drop me a message via the form. I'll get back to you as soon as possible.",
     contactMe: 'Need a Frontend developer?',
     contactMeAccent: 'Contact me!',
+    contactSending: 'Sending …',
+    contactSuccess: "Thanks! Your message arrived, I'll get back to you soon.",
+    contactError: "Oops, that didn't work. Please try again later.",
+    footerLegal: 'Legal Notice'
   },
+
   ESP: {
     about: 'Sobre mí',
     skills: 'Habilidades',
@@ -151,7 +160,11 @@ const translations: Record<Lang, Texts> = {
     contactProblem: '¿Tienes un problema para resolver?',
     contactText: 'Escríbeme a través del formulario y te responderé lo antes posible.',
     contactMe: '¿Necesitas un desarrollador frontend?',
-    contactMeAccent: '¡Contáctame!'
+    contactMeAccent: '¡Contáctame!',
+    contactSending: 'Enviando …',
+    contactSuccess: '¡Gracias! Tu mensaje ha llegado, te responderé pronto.',
+    contactError: 'Uy, algo salió mal. Inténtalo de nuevo más tarde.',
+    footerLegal: 'Aviso legal'
   },
 };
 

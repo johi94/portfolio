@@ -7,10 +7,11 @@ import { Skills } from './components/skills/skills';
 import { Work } from './components/work/work';
 import { References } from './components/references/references';
 import { Contact } from './components/contact/contact';
+import { Footer } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Hero, About, Skills, Work, References, Contact],
+  imports: [RouterOutlet, Header, Hero, About, Skills, Work, References, Contact, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

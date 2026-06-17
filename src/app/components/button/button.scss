@@ -2,7 +2,17 @@
 
 .btn {
   @include button;
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $btn-bg;   
+      color: $color-blue; 
+    }
+  }
 }
+
 .btn--large {
   @include font-size(rem(24px), rem(16px));
 }
