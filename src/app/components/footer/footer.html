@@ -1,12 +1,12 @@
 <footer class="footer">
   <div class="footer__inner">
-    <a href="#" class="footer__logo" aria-label="Nach oben">
-      <img src="img/logo.svg" alt="Logo" class="footer__logo-img" />
+    <a routerLink="/" class="footer__logo" aria-label="Zur Startseite">
+      <img src="img/logo.png" alt="Logo" class="footer__logo-img" />
     </a>
 
     <div class="footer__center">
       <p class="footer__copyright">© Jonas Hildebrand 2026</p>
-      <a href="#" class="footer__legal">{{ translation.t().footerLegal }}</a>
+      <a class="footer__legal" routerLink="/legal-notice">{{ translation.t().footerLegal }}</a>
     </div>
 
     <ul class="footer__socials">
