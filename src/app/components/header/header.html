@@ -1,15 +1,15 @@
-<header class="header" [class.header--scrolled]="isScrolled()">
+<header class="header" [class.header--scrolled]="isScrolled()" [class.header--home]="isHome()">
   <div class="header__logo">
     <a routerLink="/" class="header__logo" aria-label="Zur Startseite">
-  <img src="img/logo.png" alt="Logo" class="header__logo-img" />
+  <app-logo class="header__logo-img" />
 </a>
   </div>
 
   <nav class="header__nav">
     <ul class="header__menu">
-      <li><a href="#about">{{ translation.t().about }}</a></li>
-      <li><a href="#skills">{{ translation.t().skills }}</a></li>
-      <li><a href="#work">{{ translation.t().work }}</a></li>
+      <li><a routerLink="/" fragment="about">{{ translation.t().about }}</a></li>
+      <li><a routerLink="/" fragment="skills">{{ translation.t().skills }}</a></li>
+      <li><a routerLink="/" fragment="work">{{ translation.t().work }}</a></li>
     </ul>
 
     <div class="header__lang">

@@ -1,3 +1,63 @@
-.legal__text {
-  white-space: pre-line;
+@use '../../../scss/abstracts' as *;
+
+.legal {
+  position: relative;
+  overflow: hidden;
+  &__inner {
+    max-width: rem(1000px);
+    margin: 0 auto;
+    padding: space('xxl') space('l');
+  }
+
+  &__title {
+    @include font-size(rem(90px));
+    font-family: $font-family-heading;
+    font-weight: 700;
+    color: $color-blue;
+    margin: 0 0 space('m');
+  }
+
+  &__heading {
+    @include font-size(rem(16px));
+    font-weight: 700;
+    color: $color-blue;
+    margin: space('l') 0 space('xxs');
+  }
+
+  &__heading--imprint {
+    @include font-size(rem(32px));
+  }
+
+  &__text {
+    @include font-size(rem(16px));
+    line-height: 1.6;
+    color: $color-blk;
+    margin-top: 0;
+    margin-bottom: space('m');
+    white-space: pre-line;
+  }
+
+  &__circle {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__circle--1 {
+    @include decorative-circle(rem(120px));
+    bottom: rem(500px);
+    left: rem(-20px);     
+  }
+
+  &__circle--2 {
+    @include decorative-circle(rem(170px));
+    top: rem(200px);
+    right: rem(60px);
+  }
+  
+  &__circle--3 {
+    @include decorative-circle(rem(90px));
+    top: rem(650px);
+    right: rem(-20px);
+  }
+
 }

@@ -9,15 +9,20 @@
   z-index: 1;
   transition: background-color $transition-fast;
   &--scrolled {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-  
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
 
   &__logo-img {
     display: block;
     height: 50px;
+    color: $color-blue;
+    transition: color $transition-fast;
+  }
+
+  &--home:not(&--scrolled) &__logo-img {
+    color: $color-bg;
   }
 
   &__nav {

@@ -19,7 +19,8 @@
   &__title {
     @include font-size(rem(120px), rem(80px), rem(40px));
     padding-left: space('xl');
-    margin: 0;
+    margin-top: space('xs');                  
+    margin-bottom: space('xxl');
     font-family: $font-family-heading;
     font-weight: 700;
     line-height: 1.05;

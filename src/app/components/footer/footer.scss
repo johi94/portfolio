@@ -12,6 +12,13 @@
   &__center {
     @include flex-column($align: center, $gap: space('xs'));
   }
+
+  &__logo-img {
+  display: block;
+  height: 50px;
+  color: $color-bg;   
+}
+
   &__copyright {
     @include font-size(rem(16px));
     color: $color-bg;
