@@ -1,15 +1,30 @@
-<header class="header" [class.header--scrolled]="isScrolled()" [class.header--home]="isHome()">
+<header class="header"
+  [class.header--scrolled]="isScrolled()"
+  [class.header--home]="isHome()"
+  [class.header--menu-open]="menuOpen()">
+
   <div class="header__logo">
     <a routerLink="/" class="header__logo" aria-label="Zur Startseite">
-  <app-logo class="header__logo-img" />
-</a>
+      <app-logo class="header__logo-img" />
+    </a>
   </div>
+
+  <button
+    class="header__burger"
+    type="button"
+    (click)="toggleMenu()"
+    [attr.aria-expanded]="menuOpen()"
+    aria-label="Menü">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
   <nav class="header__nav">
     <ul class="header__menu">
-      <li><a routerLink="/" fragment="about">{{ translation.t().about }}</a></li>
-      <li><a routerLink="/" fragment="skills">{{ translation.t().skills }}</a></li>
-      <li><a routerLink="/" fragment="work">{{ translation.t().work }}</a></li>
+      <li><a routerLink="/" fragment="about" (click)="closeMenu()">{{ translation.t().about }}</a></li>
+      <li><a routerLink="/" fragment="skills" (click)="closeMenu()">{{ translation.t().skills }}</a></li>
+      <li><a routerLink="/" fragment="work" (click)="closeMenu()">{{ translation.t().work }}</a></li>
     </ul>
 
     <div class="header__lang">

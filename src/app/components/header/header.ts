@@ -15,6 +15,15 @@ export class Header {
   translation = inject(Translation);
   private router = inject(Router);
   isScrolled = signal(false);
+  menuOpen = signal(false);
+
+  toggleMenu() {
+    this.menuOpen.update((open) => !open);
+  }
+
+  closeMenu() {
+    this.menuOpen.set(false);
+  }
 
   isHome = toSignal(
     this.router.events.pipe(

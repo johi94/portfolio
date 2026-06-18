@@ -17,9 +17,10 @@
     &::before {
       content: '';
       position: absolute;
-      @include decorative-circle(1000px);
-      top: -500px;
-      left: -420px;
+      top: 0;
+      left: 0;
+      @include decorative-circle(clamp(800px, 80dvw, 1400px));
+      transform: translate(-48%, -12%);
       z-index: -1;
     }
   }
@@ -68,12 +69,6 @@
     bottom: 0;
     left: 75%;
     transform: translateX(-50%);
-    &::after {
-      content: '';
-      width: 2px;
-      height: 250px;
-      background: $color-nav;
-    }
 
     &-label {
       font-size: rem(16px);
@@ -97,8 +92,9 @@
       height: 30px;
     }
   }
+
   &__social {
     display: block;
-    @include hover-lift (0.1);
+    @include hover-lift(0.1);
   }
 }

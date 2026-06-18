@@ -1,12 +1,13 @@
 @use '../../../scss/abstracts' as *;
 
 .work {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
+  isolation: isolate;  
   &__inner {
     @include container;
     padding-block: space('xxl');
+    position: relative;   
+    overflow: hidden;     
+    isolation: isolate;
   }
   &__title {
     @include font-size(rem(96px), rem(56px), rem(40px));

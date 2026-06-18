@@ -24,14 +24,14 @@ export class Work {
       tech: ['JavaScript', 'HTML', 'CSS'],
       descriptionKey: 'workDescPollo',
       image: 'img/pollo_loco.png',
-      githubUrl: '',
+      githubUrl: 'https://github.com/johi94/El_Pollo_Loco/tree/main',
     },
     {
       title: 'Pokédex',
       tech: ['JavaScript', 'HTML', 'CSS', 'API'],
       descriptionKey: 'workDescPoke',
       image: 'img/pokedex.png',
-      githubUrl: '',
+      githubUrl: 'https://github.com/johi94/Poked-x',
     },
   ];
 }
