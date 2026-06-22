@@ -5,31 +5,49 @@
     @include container;
     @include flex($justify: center, $gap: space('xl'));
     padding-block: space('xxl');
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    align-items: flex-start;
+
+    @include respond(mobile) {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
   &__intro {
     @include flex-column($gap: space('l'));
+    container-type: inline-size;
   }
 
   &__intro,
   &__text {
     flex: 1;
+    min-width: 0;
+
+    @include respond(mobile) {
+      flex: none;
+    }
   }
 
   &__title {
-    @include font-size(rem(120px), rem(80px), rem(40px));
-    padding-left: space('xl');
-    margin-top: space('xs');                  
-    margin-bottom: space('xxl');
+    font-size: clamp(rem(45px), 18cqi, rem(120px));
+    margin: space('l');
     font-family: $font-family-heading;
     font-weight: 700;
     line-height: 1.05;
     color: $color-blue;
     white-space: pre-line;
+
+    @include respond(mobile) {
+      margin-top: space('xxl');
+      margin-bottom: space('xxs');
+    }
   }
 
   &__subtitle {
-    @include font-size(rem(45px), rem(32px), rem(24px));
+    @include font-size(rem(45px), rem(40px), rem(32px));
     margin: 0;
     font-family: $font-family-heading;
     font-weight: 700;
@@ -41,18 +59,35 @@
     @include flex($justify: flex-start, $gap: space('xxl'));
     @include list-reset;
     justify-content: center;
+
+    @include respond(mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: space('s');
+      width: fit-content;
+      margin-inline: auto;
+    }
   }
 
   &__fact {
     @include flex($justify: flex-start, $gap: space('s'));
+    align-items: center;
     span {
       color: $color-blue;
       max-width: 10ch;
+
+      @include respond(mobile) {
+        max-width: 20ch;
+      }
     }
 
     img {
       height: rem(48px);
       width: auto;
+
+      @include respond(mobile) {
+        height: rem(32px);
+      }
     }
   }
 
@@ -60,5 +95,36 @@
     p {
       line-height: 1.6;
     }
+    margin: space('xl');
+    @include respond(mobile) {
+      margin: space('xxs');
+      text-align: left;
+    }
+  }
+
+  app-button {
+    @include respond(mobile) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__circle--1 {
+    @include decorative-circle(clamp(rem(150px), 20dvw, rem(210px)));
+    top: 0;
+    left: 42%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__circle--2 {
+    @include decorative-circle(clamp(rem(60px), 7vw, rem(80px)));
+    top: 6%;
+    right: 18%;
+    transform: translateY(-50%);
   }
 }

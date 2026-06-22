@@ -1,5 +1,7 @@
 <section class="about" id="about">
   <div class="about__inner">
+    <span class="about__circle about__circle--1" aria-hidden="true"></span>
+    <span class="about__circle about__circle--2" aria-hidden="true"></span>
     <div class="about__intro">
       <h2 class="about__title">{{ translation.t().aboutTitle }}</h2>
       <p class="about__subtitle">{{ translation.t().aboutSubtitle }}</p>
@@ -21,7 +23,9 @@
       <p>
         {{ translation.t().aboutBio2 }}
       </p>
-      <app-button href="#contact" size="large">{{ translation.t().aboutCta }}</app-button>
+      <app-button routerLink="/" fragment="contact" size="large">
+        {{ translation.t().aboutCta }}
+      </app-button>
     </div>
   </div>
 </section>

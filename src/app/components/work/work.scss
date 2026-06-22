@@ -33,16 +33,34 @@
       flex-direction: row-reverse;
       text-align: right;
     }
+     @include respond(tablet) {
+    flex-direction: column;       
+    text-align: left;  
+    align-items: center;           
+    &:nth-child(even) {
+      flex-direction: column;     
+      text-align: left;
+    }
   }
+}
+  
 
   &__image {
     width: 50%;
-    height: rem(400px);
-    object-fit: cover;
+    height: auto;
+    align-self: flex-start; 
+    object-fit: contain;
     display: block;
     border-radius: $radius;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+    @include respond(tablet) {
+    width: 100%;  
+    max-width: rem(480px);
+    align-self: center;          
   }
+  }
+
   &__info {
     @include flex-column($gap: space('xxs'));
     flex: 1;
@@ -74,8 +92,11 @@
 
   &__circle--2 {
     @include decorative-circle(rem(180px));
-    top: rem(150px);
+    top: rem(180px);
     right: rem(200px);
+    @include respond(tablet) {
+      display: none;
+    }
   }
 
   &__circle--3 {

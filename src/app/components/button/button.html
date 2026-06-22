@@ -1,6 +1,15 @@
 <ng-template #content><ng-content></ng-content></ng-template>
 
-@if (href()) {
+@if (routerLink()) {
+  <a
+    class="btn"
+    [routerLink]="routerLink()"
+    [fragment]="fragment()"
+    [class.btn--large]="size() === 'large'"
+  >
+    <ng-container [ngTemplateOutlet]="content"></ng-container>
+  </a>
+} @else if (href()) {
   <a
     class="btn"
     [href]="href()"

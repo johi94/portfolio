@@ -1,36 +1,46 @@
 <section class="hero" id="hero">
-    <div class="hero__inner">
-  <div class="hero__visual">
-    <img src="img/profile.png" alt="Porträt von Jonas" class="hero__photo" />
-  </div>
+  <div class="hero__inner">
+    <div class="hero__visual">
+      <img src="img/profile.png" alt="Porträt von Jonas" class="hero__photo" />
+    </div>
 
-  <div class="hero__content">
-    <p class="hero__greeting">{{ translation.t().greeting }}</p>
-    <h1 class="hero__title">
-      <span class="hero__title-line">Frontend</span>
-      <span class="hero__title-line hero__title-line--bottom">Developer</span>
-    </h1>
+    <div class="hero__content">
+      <p class="hero__greeting">{{ translation.t().greeting }}</p>
+      <h1 class="hero__title">
+        <span class="hero__title-line">Frontend</span>
+        <span class="hero__title-line hero__title-line--bottom">Developer</span>
+      </h1>
+    </div>
+    <div class="hero__scroll">
+      <span class="hero__scroll-label hero__scroll-label--desktop">{{
+        translation.t().scroll
+      }}</span>
+      <span class="hero__scroll-label hero__scroll-label--mobile">{{
+        translation.t().scrollDown
+      }}</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+    <ul class="hero__socials">
+      <li>
+        <a class="hero__social" href="https://github.com/johi94" target="_blank" rel="noopener">
+          <img src="img/icons/github-btn.svg" alt="GitHub-Profil" />
+        </a>
+      </li>
+      <li>
+        <a class="hero__social" href="mailto:jhildebrand94@googlemail.com">
+          <img src="img/icons/mail-btn.svg" alt="E-Mail schreiben" />
+        </a>
+      </li>
+      <li>
+        <a
+          class="hero__social"
+          href="https://www.linkedin.com/in/jonas-hildebrand-476b2b340/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="img/icons/linkedin-btn.svg" alt="LinkedIn-Profil" />
+        </a>
+      </li>
+    </ul>
   </div>
-  <div class="hero__scroll">
-  <span class="hero__scroll-label">{{ translation.t().scroll }}</span>
-</div>
-<ul class="hero__socials">
-  <li>
-    <a class="hero__social" href="https://github.com/johi94" target="_blank" rel="noopener">
-      <img src="img/icons/github-btn.svg" alt="GitHub-Profil" />
-    </a>
-  </li>
-  <li>
-    <a class="hero__social" href="mailto:jhildebrand94@googlemail.com">
-      <img src="img/icons/mail-btn.svg" alt="E-Mail schreiben" />
-    </a>
-  </li>
-  <li>
-    <a class="hero__social" href="https://www.linkedin.com/in/jonas-hildebrand-476b2b340/" target="_blank" rel="noopener">
-      <img src="img/icons/linkedin-btn.svg" alt="LinkedIn-Profil" />
-    </a>
-  </li>
-</ul>
-  </div>
-  
 </section>

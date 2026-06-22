@@ -3,50 +3,81 @@
 .hero {
   background: $gradient-bg;
   isolation: isolate;
+  isolation: isolate;
+  position: relative;
 
   &__inner {
     @include container;
-    @include flex($gap: space('xxl'));
+    @include flex($gap: space('l'));
     min-height: calc(100dvh - 80px);
     position: relative;
+
+    @include respond(mobile) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__visual {
     position: relative;
+    flex: 1;
 
     &::before {
+      @include decorative-circle(clamp(rem(320px), 64dvw, rem(900px)));
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      @include decorative-circle(clamp(800px, 80dvw, 1400px));
-      transform: translate(-48%, -12%);
-      z-index: -1;
+      transform: translate(-42%, -100px);
+
+      @include respond(mobile) {
+        width: 90dvh;
+        height: 100dvh;
+        left: 50%;
+        transform: translate(-85%, -470px);
+      }
     }
   }
 
   &__photo {
     display: block;
-    width: 600px;
+    width: auto;
+    height: 100dvh;
+    max-width: 100%;
+    max-height: calc(100dvh - 80px);
     position: relative;
-    bottom: -20px;
+
+    @include respond(mobile) {
+      height: 75dvh;
+    }
   }
 
   &__content {
     @include flex-column($gap: space('xs'));
+    flex: 1;
+    container-type: inline-size;
     position: relative;
-    bottom: 100px;
+    bottom: space('xxxl');
+
+    @include respond(mobile) {
+      top: space('m');
+      bottom: 0;
+      align-self: stretch;
+    }
   }
 
   &__greeting {
     margin: 0;
-    @include font-size(rem(70px), rem(48px), rem(32px));
+    font-size: clamp(rem(32px), 8cqi, rem(60px));
     font-weight: 400;
+    line-height: 1.05;
     color: $color-blue;
+
+    @include respond(mobile) {
+      color: $color-bg;
+      font-size: clamp(rem(20px), 4cqi, rem(25px));
+    }
   }
 
   &__title {
-    @include font-size(rem(140px), rem(96px), rem(56px));
+    font-size: clamp(rem(52px), 18cqi, rem(140px));
     margin: 0;
     font-family: $font-family-heading;
     font-weight: 800;
@@ -58,17 +89,32 @@
       display: block;
 
       &--bottom {
-        @include font-size(rem(130px), rem(88px), rem(52px));
+        font-size: clamp(rem(48px), 17cqi, rem(130px));
+
+        @include respond(mobile) {
+          font-size: clamp(rem(42px), 12cqi, rem(68px));
+        }
       }
+    }
+
+    @include respond(mobile) {
+      color: $color-bg;
+      font-size: clamp(rem(45px), 14cqi, rem(72px));
     }
   }
 
   &__scroll {
     @include flex-column(center, 12px);
     position: absolute;
-    bottom: 0;
+    bottom: 0%;
     left: 75%;
     transform: translateX(-50%);
+
+    @include respond(mobile) {
+      left: auto;
+      right: space('xs');
+      transform: none;
+    }
 
     &-label {
       font-size: rem(16px);
@@ -76,6 +122,26 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       color: $color-nav;
+
+      &--mobile {
+        display: none;
+
+        @include respond(mobile) {
+          display: block;
+          writing-mode: vertical-rl;
+        }
+      }
+      &--desktop {
+        @include respond(mobile) {
+          display: none;
+        }
+      }
+    }
+
+    &-line {
+      width: 2px;
+      height: clamp(rem(140px), 30vh, rem(320px));
+      background: $color-blue;
     }
   }
 
@@ -90,6 +156,10 @@
       display: block;
       width: 30px;
       height: 30px;
+    }
+
+    @include respond(mobile) {
+      display: none;
     }
   }
 
