@@ -2,17 +2,28 @@
 
 .btn {
   @include button;
+  white-space: nowrap;
   &:disabled {
     opacity: 0.4;
     cursor: not-allowed;
 
     &:hover {
-      background-color: $btn-bg;   
+      background: $btn-bg;   
       color: $color-blue; 
     }
   }
 }
 
 .btn--large {
-  @include font-size(rem(24px), rem(16px));
+  @include font-size(rem(32px), rem(24px));
+}
+
+.btn--filled {
+  background-color: $color-blue;   
+  color: $color-bg;                
+
+  &:hover {
+    background: $btn-bg;   
+    color: $color-blue;                     
+  }
 }

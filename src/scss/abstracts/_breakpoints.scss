@@ -1,6 +1,7 @@
 @use 'sass:map';
 
 $breakpoints: (
+  'widescreen': 1440px,
   'tablet': 1024px,
   'mobile': 768px,
 );
@@ -11,6 +12,15 @@ $breakpoints: (
   }
 
   @media (max-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin respond-up($breakpoint) {
+  @if not map.has-key($breakpoints, $breakpoint) {
+    @error 'Unbekannter Breakpoint "#{$breakpoint}". Verfügbar: #{map.keys($breakpoints)}';
+  }
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
     @content;
   }
 }

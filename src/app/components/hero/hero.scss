@@ -3,8 +3,8 @@
 .hero {
   background: $gradient-bg;
   isolation: isolate;
-  isolation: isolate;
   position: relative;
+  overflow-x: clip;
 
   &__inner {
     @include container;
@@ -15,17 +15,27 @@
     @include respond(mobile) {
       flex-direction: column-reverse;
     }
+
+    @include respond-up(widescreen) {
+      min-height: auto;
+      align-items: stretch;
+    }
   }
 
   &__visual {
     position: relative;
     flex: 1;
+    align-self: stretch;
+    display: flex;
+    align-items: flex-end;
 
     &::before {
-      @include decorative-circle(clamp(rem(320px), 64dvw, rem(900px)));
+      @include decorative-circle(clamp(rem(360px), 80dvw, rem(820px)));
       content: '';
       position: absolute;
-      transform: translate(-42%, -100px);
+      top: rem(-100px);
+      left: -10%;
+      transform: translateX(-50%);
 
       @include respond(mobile) {
         width: 90dvh;
@@ -34,18 +44,42 @@
         transform: translate(-85%, -470px);
       }
     }
+
+    @include respond(mobile) {
+      align-items: flex-end;
+      justify-content: center;
+      align-self: stretch;
+    }
+
+    @include respond-up(widescreen) {
+      align-items: stretch;
+      align-self: stretch;
+    }
   }
 
   &__photo {
     display: block;
     width: auto;
-    height: 100dvh;
+    height: auto;
     max-width: 100%;
-    max-height: calc(100dvh - 80px);
+    max-height: calc(100dvh - 150px);
     position: relative;
+    left: -5%;
 
     @include respond(mobile) {
-      height: 75dvh;
+      height: 50dvh; 
+      max-height: 100%;
+      max-width: none; 
+      width: auto;
+      left: 0;
+      bottom: 0;
+    }
+
+    @include respond-up(widescreen) {
+      height: 100%;
+      max-height: none;
+      width: auto;
+      left: -20%;
     }
   }
 
@@ -60,6 +94,11 @@
       top: space('m');
       bottom: 0;
       align-self: stretch;
+    }
+
+    @include respond-up(widescreen) {
+      text-align: right;
+      top: space('xxxl');
     }
   }
 
@@ -150,7 +189,7 @@
     @include flex-column($gap: space('m'));
     position: absolute;
     right: space('l');
-    bottom: space('l');
+    bottom: space('xxxl');
 
     img {
       display: block;

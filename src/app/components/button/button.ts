@@ -16,4 +16,5 @@ export class Button {
   routerLink = input<string>(); 
   fragment = input<string>();
   size = input<'normal' | 'large'>('normal');
+  variant = input<'outline' | 'filled'>('outline');
 }

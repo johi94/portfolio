@@ -2,15 +2,30 @@
 
 .legal {
   position: relative;
-  overflow: hidden;
+  max-width: rem(1440px);
+  margin: 0 auto;
+  overflow: clip;
+
   &__inner {
     max-width: rem(1000px);
     margin: 0 auto;
     padding: space('xxl') space('l');
+    padding-right: calc(#{space('l')} + #{rem(42px)});
+  }
+
+  &__back {
+    @include hover-lift;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: rem(-42px);
+    position: sticky;
+    top: rem(120px);
+    z-index: 1;
   }
 
   &__title {
-    @include font-size(rem(90px));
+    @include font-size(rem(90px), rem(60px), rem(40px));
     font-family: $font-family-heading;
     font-weight: 700;
     color: $color-blue;
@@ -25,7 +40,7 @@
   }
 
   &__heading--imprint {
-    @include font-size(rem(32px));
+    @include font-size(rem(32px), rem(24px));
   }
 
   &__text {
@@ -44,20 +59,31 @@
 
   &__circle--1 {
     @include decorative-circle(rem(120px));
-    bottom: rem(500px);
-    left: rem(-20px);     
+    bottom: rem(450px);
+    left: rem(-20px);
+
+    @include respond(tablet) {
+      display: none;
+    }
   }
 
   &__circle--2 {
     @include decorative-circle(rem(170px));
     top: rem(200px);
-    right: rem(60px);
+    right: rem(100px);
+
+    @include respond(tablet) {
+      display: none;
+    }
   }
-  
+
   &__circle--3 {
     @include decorative-circle(rem(90px));
     top: rem(650px);
     right: rem(-20px);
-  }
 
+    @include respond(tablet) {
+      display: none;
+    }
+  }
 }

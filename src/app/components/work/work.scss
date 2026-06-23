@@ -1,14 +1,16 @@
 @use '../../../scss/abstracts' as *;
 
 .work {
-  isolation: isolate;  
+  isolation: isolate;
+
   &__inner {
     @include container;
     padding-block: space('xxl');
-    position: relative;   
-    overflow: hidden;     
+    position: relative;
+    overflow: hidden;
     isolation: isolate;
   }
+
   &__title {
     @include font-size(rem(96px), rem(56px), rem(40px));
     font-family: $font-family-heading;
@@ -17,15 +19,18 @@
     margin-top: space('xl');
     margin-bottom: space('xs');
   }
+
   &__subtitle {
     @include font-size(rem(24px), rem(20px), rem(16px));
     max-width: rem(580px);
     margin-bottom: space('xl');
   }
+
   &__list {
     @include list-reset;
     @include flex-column($gap: space('xxl'));
   }
+
   &__item {
     @include flex($gap: space('xxl'));
     align-items: stretch;
@@ -33,61 +38,81 @@
       flex-direction: row-reverse;
       text-align: right;
     }
-     @include respond(tablet) {
-    flex-direction: column;       
-    text-align: left;  
-    align-items: center;           
-    &:nth-child(even) {
-      flex-direction: column;     
+
+    @include respond(tablet) {
+      flex-direction: column;
       text-align: left;
+      align-items: center;
+      &:nth-child(even) {
+        flex-direction: column;
+        text-align: left;
+      }
     }
   }
-}
-  
 
   &__image {
     width: 50%;
     height: auto;
-    align-self: flex-start; 
+    align-self: flex-start;
     object-fit: contain;
     display: block;
     border-radius: $radius;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 
     @include respond(tablet) {
-    width: 100%;  
-    max-width: rem(480px);
-    align-self: center;          
-  }
+      width: 100%;
+      max-width: rem(480px);
+      align-self: center;
+    }
   }
 
   &__info {
     @include flex-column($gap: space('xxs'));
     flex: 1;
+
+    @include respond(tablet) {
+      align-items: center;
+    }
   }
+
   &__name {
     @include font-size(rem(40px), rem(32px), rem(24px));
     font-family: $font-family-heading;
     color: $color-blue;
     margin-top: auto;
   }
+
   &__tech {
     @include font-size(rem(24px), rem(18px));
     color: $color-blue;
     margin: 0;
   }
+
   &__description {
     @include font-size(rem(16px));
   }
+
+  &__actions {
+    @include flex($gap: space('s'));
+
+    @include respond(tablet) {
+    justify-content: center;          
+  }
+  }
+
+  &__item:nth-child(even) &__actions {
+    justify-content: flex-end; 
+  }
+
   &__circle {
     position: absolute;
     z-index: -1;
   }
 
   &__circle--1 {
-    @include decorative-circle(rem(110px));
-    top: rem(60px);
-    left: rem(800px);
+    @include decorative-circle(clamp(rem(70px), 9dvw, rem(110px)));
+    top: rem(40px);
+    left: 65%;
   }
 
   &__circle--2 {
@@ -100,14 +125,24 @@
   }
 
   &__circle--3 {
-    @include decorative-circle(rem(400px));
-    top: rem(700px);
-    left: rem(-250px);
+    @include decorative-circle(clamp(rem(180px), 20dvw, rem(320px)));
+    top: 25%;
+    left: 1%;
   }
 
   &__circle--4 {
-    @include decorative-circle(rem(250px));
-    top: rem(850px);
-    right: rem(-140px);
+    @include decorative-circle(clamp(rem(140px), 20vw, rem(300px)));
+    bottom: 20%;
+    right: -8%;
+  }
+
+  &__circle--5 {
+    @include decorative-circle(rem(180px));
+    bottom: 25%;
+    left: 5%;
+
+    @include respond(mobile) {
+      display: none;
+    }
   }
 }

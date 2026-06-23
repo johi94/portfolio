@@ -7,10 +7,20 @@
     @include container;
     @include flex($justify: space-between);
     padding-block: space('xl');
+
+    @include respond(mobile) {
+    flex-direction: column;
+    align-items: center;
+    gap: space('m');
+  }
   }
 
   &__center {
     @include flex-column($align: center, $gap: space('xs'));
+
+    @include respond(mobile) {
+    display: contents;
+    }
   }
 
   &__logo-img {
@@ -31,6 +41,10 @@
     &:hover {
       text-decoration: underline;
     }
+
+     @include respond(mobile) {
+    order: 1;
+     }
   }
 
   &__socials {

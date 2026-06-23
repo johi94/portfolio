@@ -5,67 +5,90 @@
   isolation: isolate;
   overflow: hidden;
   background: $gradient-bg;
+
   &__inner {
     @include container;
     padding-top: space('xxl');
     padding-bottom: space('xxxl');
-    position: relative;   
+    position: relative;
   }
+
   &__columns {
     @include flex($justify: space-between, $gap: space('xxl'));
     align-items: flex-start;
+
+    @include respond(tablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
+
   &__intro {
     @include flex-column($align: stretch, $gap: space('xxs'));
   }
+
   &__label {
     @include font-size(rem(96px), rem(56px), rem(40px));
     font-family: $font-family-heading;
     color: $color-blue;
   }
+
   &__problem {
     @include font-size(rem(32px), rem(24px), rem(20px));
     color: $color-blue;
     font-weight: 700;
     margin-top: 0;
   }
+
   &__text {
     @include font-size(rem(16px));
     max-width: rem(520px);
     line-height: 1.5;
   }
+
   &__contactme {
     @include font-size(rem(16px));
     color: $color-blue;
   }
+
   &__accent {
     @include font-size(rem(16px));
     font-family: $font-family-heading;
     color: $color-blue-dark;
     font-weight: 700;
   }
+
   &__form {
     @include flex-column($gap: space('xxs'));
     flex: 1;
   }
+
   &__send {
     align-self: center;
+    margin-top: space('xl');
   }
+
   &__group {
     @include flex-column($gap: space('xxs'));
   }
 
   &__field {
-  position: relative;
-  margin-bottom: space('m');   
-}
-&__field &__input {
-  margin-bottom: 0;            
-}
-&__field &__error {
-  position: absolute;
-  top: 100%;                   
-}
+    position: relative;
+    margin-bottom: space('l');
+
+    @include respond(mobile) {
+    margin-bottom: space('xl');   
+  }
+  }
+
+  &__field &__input {
+    margin-bottom: 0;
+  }
+
+  &__field &__error {
+    position: absolute;
+    top: 100%;
+  }
 
   &__input {
     width: 100%;
@@ -76,7 +99,6 @@
     font-family: $font-family-base;
     font-size: rem(16px);
     color: $color-blk;
-    margin-bottom: space('m'); 
 
     &::placeholder {
       @include font-size(rem(16px));
@@ -99,11 +121,27 @@
     @include font-size(rem(16px));
     min-height: space('s');
     margin: 0;
+    margin-top: space('xxs');
+  }
+
+  &__privacy input {
+    flex-shrink: 0;
+    width: rem(16px);
+    height: rem(16px);
+    margin: 0;
   }
 
   &__privacy {
     @include font-size(rem(16px));
+    display: flex;
+    align-items: flex-start;
+    gap: space('xs');
   }
+
+  &__privacy + &__error {
+    padding-left: calc(#{rem(16px)} + #{space('xs')}); 
+  }
+
   &__link {
     color: $color-blue;
     text-decoration: none;
@@ -113,7 +151,7 @@
     }
   }
 
-    &__feedback {
+  &__feedback {
     @include font-size(rem(16px));
     text-align: center;
     margin: 0;
@@ -128,24 +166,31 @@
       color: $color-error;
     }
   }
-  
-    &__circle {
+
+  &__circle {
     position: absolute;
     z-index: -1;
   }
+
   &__circle--1 {
-    @include decorative-circle(rem(130px));
+    @include decorative-circle(clamp(rem(80px), 10dvw, rem(130px)));
     top: rem(50px);
-    right: rem(500px);
+    right: 20%;
   }
+
   &__circle--2 {
-    @include decorative-circle(rem(70px));
+    @include decorative-circle(clamp(rem(50px), 6vw, rem(70px)));
     bottom: rem(60px);
     right: rem(20px);
   }
+
   &__circle--3 {
-    @include decorative-circle(rem(200px));
-    bottom: rem(160px);
+    @include decorative-circle(clamp(rem(200px), 14dvw, rem(220px)));
+    bottom: rem(120px);
     left: rem(160px);
+
+    @include respond(tablet) {
+      display: none;
+    }
   }
 }
