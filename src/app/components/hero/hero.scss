@@ -9,7 +9,7 @@
   &__inner {
     @include container;
     @include flex($gap: space('l'));
-    min-height: calc(100dvh - 80px);
+    min-height: calc(100vh - 80px);
     position: relative;
 
     @include respond(mobile) {
@@ -30,7 +30,7 @@
     align-items: flex-end;
 
     &::before {
-      @include decorative-circle(clamp(rem(360px), 80dvw, rem(820px)));
+      @include decorative-circle(clamp(rem(360px), 80vw, rem(820px)));
       content: '';
       position: absolute;
       top: rem(-100px);
@@ -62,7 +62,7 @@
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: calc(100dvh - 150px);
+    max-height: calc(100vh - 150px);
     position: relative;
     left: -5%;
 
@@ -104,19 +104,19 @@
 
   &__greeting {
     margin: 0;
-    font-size: clamp(rem(32px), 8cqi, rem(60px));
+    font-size: clamp(rem(32px), 4vw, rem(60px));
     font-weight: 400;
     line-height: 1.05;
     color: $color-blue;
 
     @include respond(mobile) {
       color: $color-bg;
-      font-size: clamp(rem(20px), 4cqi, rem(25px));
+      font-size: clamp(rem(18px), 4vw, rem(25px));
     }
   }
 
   &__title {
-    font-size: clamp(rem(52px), 18cqi, rem(140px));
+    font-size: clamp(rem(52px), 9vw, rem(140px));
     margin: 0;
     font-family: $font-family-heading;
     font-weight: 800;
@@ -128,17 +128,17 @@
       display: block;
 
       &--bottom {
-        font-size: clamp(rem(48px), 17cqi, rem(130px));
+        font-size: clamp(rem(48px), 8.5vw, rem(130px));
 
         @include respond(mobile) {
-          font-size: clamp(rem(35px), 10cqi, rem(68px));
+          font-size: clamp(rem(30px), 8vw, rem(68px));
         }
       }
     }
 
     @include respond(mobile) {
       color: $color-bg;
-      font-size: clamp(rem(35px), 12cqi, rem(72px));
+      font-size: clamp(rem(32px), 8.5vw, rem(72px));
     }
   }
 
