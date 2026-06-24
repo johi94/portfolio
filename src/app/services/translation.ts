@@ -57,7 +57,7 @@ const de = {
   footerLegal: 'Impressum',
   legalTitle: 'Impressum',
   legalImprintTitle: 'Angaben gemäß § 5 TMG',
-  legalImprintText: 'Jonas Hildebrand\nStraße und Hausnummer\nPLZ und Ort\n\n',
+  legalImprintText: 'Jonas Hildebrand\nCalle Cañada 8927\n72154 Heroica Puebla de Zaragoza, Puebla\n\n',
   legalBoard: 'Kontakt',
   legalMail: 'E-Mail: jhildebrand94@googlemail.com',
   legalAcceptanceTitle: 'Annahme der Bedingungen',
@@ -79,7 +79,7 @@ const de = {
   legalIndemnityText:
     'Sie erklären sich damit einverstanden, uns, die genannten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Direktoren, Beauftragten und Mitarbeiter von allen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen dieses Impressum ergeben oder damit zusammenhängen.',
   legalContact: 'Bei Fragen oder Mitteilungen kontaktieren Sie uns bitte unter jhildebrand94@googlemail.com.',
-  legalDate: 'Stand: 22. Juni 2026',
+  legalDate: 'Stand: 24. Juni 2026',
 };
 
 export type Texts = typeof de;
@@ -141,7 +141,7 @@ const translations: Record<Lang, Texts> = {
     footerLegal: 'Legal Notice',
     legalTitle: 'Legal Notice',
     legalImprintTitle: 'Imprint',
-    legalImprintText: 'Jonas Hildebrand\nStraße und Hausnummer\nPLZ und Ort\n\n',
+    legalImprintText: 'Jonas Hildebrand\nCalle Cañada 8927\n72154 Heroica Puebla de Zaragoza, Puebla\n\n',
     legalBoard: 'Contact',
     legalMail: 'E-Mail: jhildebrand94@googlemail.com',
     legalAcceptanceTitle: 'Acceptance of terms',
@@ -164,7 +164,7 @@ const translations: Record<Lang, Texts> = {
       'You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.',
     legalContact:
       'For any questions or notices, please contact us at jhildebrand94@googlemail.com.',
-    legalDate: 'Date: June 22, 2026',
+    legalDate: 'Date: June 24, 2026',
   },
 
   ESP: {
@@ -221,7 +221,7 @@ const translations: Record<Lang, Texts> = {
     footerLegal: 'Aviso legal',
     legalTitle: 'Aviso legal',
     legalImprintTitle: 'Datos identificativos',
-    legalImprintText: 'Jonas Hildebrand\nCalle y número\nCódigo postal y ciudad\n\n',
+    legalImprintText: 'Jonas Hildebrand\nCalle Cañada 8927\n72154 Heroica Puebla de Zaragoza, Puebla\n\n',
     legalBoard: 'Contacto',
     legalMail: 'E-Mail: jhildebrand94@googlemail.com',
     legalAcceptanceTitle: 'Aceptación de los términos',
@@ -243,7 +243,7 @@ const translations: Record<Lang, Texts> = {
     legalIndemnityText:
       'Acepta indemnizar, defender y eximir de responsabilidad a nosotros, los estudiantes mencionados, a Developer Akademie y a nuestras filiales, socios, directivos, directores, agentes y empleados, frente a cualquier reclamación, demanda, pérdida, daño, coste o responsabilidad (incluidos los honorarios legales razonables) que se derive de su uso de Portfolio o de su incumplimiento de este aviso legal, o que esté relacionado con ellos.',
     legalContact: 'Para cualquier pregunta o notificación, contáctenos en jhildebrand94@googlemail.com.',
-    legalDate: 'Fecha: 22 de junio de 2026',
+    legalDate: 'Fecha: 24 de junio de 2026',
   },
 };
 

@@ -131,14 +131,14 @@
         font-size: clamp(rem(48px), 17cqi, rem(130px));
 
         @include respond(mobile) {
-          font-size: clamp(rem(42px), 12cqi, rem(68px));
+          font-size: clamp(rem(35px), 10cqi, rem(68px));
         }
       }
     }
 
     @include respond(mobile) {
       color: $color-bg;
-      font-size: clamp(rem(45px), 14cqi, rem(72px));
+      font-size: clamp(rem(35px), 12cqi, rem(72px));
     }
   }
 
