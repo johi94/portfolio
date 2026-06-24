@@ -92,6 +92,7 @@
   }
 
   &__text {
+    @include font-size(rem(24px), rem(16px));
     p {
       line-height: 1.6;
     }

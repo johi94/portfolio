@@ -14,21 +14,21 @@ const de = {
   aboutFactLocation: 'wohne in Puebla',
   aboutFactRemote: 'bin offen für Remote-Arbeit',
   aboutBio1:
-    'Ich bin leidenschaftlicher Frontend-Entwickler und liebe es, Ideen in saubere, lebendige Web-Oberflächen zu verwandeln. Neue Technologien zu lernen treibt mich an – jeder Tag ist eine Chance, besser zu werden.',
+    'Am Frontend fasziniert mich, wie aus einer Idee eine durchdachte, lebendige Oberfläche entsteht. Das Zusammenspiel aus klarer Logik und gutem Design treibt mich an. Diese Begeisterung hält mich neugierig und offen, mich stetig in neue Technologien einzuarbeiten.',
   aboutBio2:
-    'An Herausforderungen gehe ich analytisch heran und suche nach der elegantesten Lösung. Dabei zählen für mich Neugier, Ausdauer und gute Zusammenarbeit im Team.',
+    'An Probleme gehe ich analytisch heran und behalte zugleich den kreativen Spielraum im Blick. Oft entsteht die eleganteste Lösung genau aus dieser Verbindung. Jede Herausforderung sehe ich als Gelegenheit, Neues zu lernen und mich weiterzuentwickeln.',
   aboutCta: 'Nachricht senden',
   titleWork: 'Meine Arbeiten',
   workSubtitle:
     'Entdecken Sie hier eine Auswahl meiner Arbeiten. Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.',
   workDescPollo:
-    'Jump-, Run- und Wurfspiel auf Basis objektorientierter Programmierung. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.',
+    'Jump-, Run- und Wurfspiel auf Basis objektorientierter Programmierung. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.',
   workDescPoke:
     'Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.',
   refTitle: 'Brauchen Sie einen Teamplayer?',
   refSubtitle: 'Das sagen meine Kolleg:innen über mich.',
   refQuoteJames:
-    '„Jonas ist ein zuverlässiger und freundlicher Teamkollege. Er arbeitet strukturiert und schreibt sauberen Code ich würde jederzeit wieder mit ihm zusammenarbeiten."',
+    '„Jonas ist ein zuverlässiger und freundlicher Teamkollege. Er arbeitet strukturiert und schreibt sauberen Code. Ich würde jederzeit wieder mit ihm zusammenarbeiten."',
   refQuoteEvelyn:
     '„Jonas ist ein vertrauenswürdiger Teamplayer, der auch unter Termindruck ruhig bleibt. Strukturierte Arbeit und klare Kommunikation."',
   refQuoteNoah:
@@ -62,7 +62,7 @@ const de = {
   legalMail: 'E-Mail: jhildebrand94@googlemail.com',
   legalAcceptanceTitle: 'Annahme der Bedingungen',
   legalAcceptanceText:
-    'Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennst du die folgenden Geschäftsbedingungen sowie alle Richtlinien, Leitlinien oder Änderungen an, die dir von Zeit zu Zeit vorgelegt werden können, und stimmst ihnen zu. Wir, die genannten Studierenden, können die Bedingungen jederzeit ohne Vorankündigung aktualisieren oder ändern.',
+    'Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Geschäftsbedingungen sowie alle Richtlinien, Leitlinien oder Änderungen an, die Ihnen von Zeit zu Zeit vorgelegt werden können, und stimmen ihnen zu. Wir, die genannten Studierenden, können die Bedingungen jederzeit ohne Vorankündigung aktualisieren oder ändern.',
   legalScopeTitle: 'Umfang und Eigentum des Produkts',
   legalScopeText:
     'Portfolio wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp der Developer Akademie GmbH entwickelt. Es dient Bildungszwecken und ist nicht für die umfangreiche private oder geschäftliche Nutzung bestimmt. Daher können wir keine durchgängige Verfügbarkeit, Zuverlässigkeit, Richtigkeit oder sonstige Qualität dieses Produkts garantieren. Das Design von Portfolio ist Eigentum der Developer Akademie GmbH. Die unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Reproduktion des Designs ist strengstens untersagt.',
@@ -71,14 +71,14 @@ const de = {
     'Abgesehen von dem Design, das der Developer Akademie GmbH gehört, behalten wir, die genannten Studierenden, alle Eigentumsrechte an Portfolio, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und sonstigen geschützten Informationen.',
   legalUseTitle: 'Nutzung des Produkts',
   legalUseText:
-    'Portfolio ist ausschließlich für rechtmäßige Zwecke und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften zu verwenden. Jede Nutzung von Portfolio für illegale Aktivitäten oder um eine andere Person zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist strengstens untersagt. Du bist allein für deine Interaktionen mit anderen Nutzern von Portfolio verantwortlich.',
+    'Portfolio ist ausschließlich für rechtmäßige Zwecke und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften zu verwenden. Jede Nutzung von Portfolio für illegale Aktivitäten oder um eine andere Person zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist strengstens untersagt. Sie sind allein für Ihre Interaktionen mit anderen Nutzern von Portfolio verantwortlich.',
   legalDisclaimerTitle: 'Haftungsausschluss und Haftungsbeschränkung',
   legalDisclaimerText:
     'Portfolio wird „wie besehen" ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten. In keinem Fall haften wir, die genannten Studierenden, oder die Developer Akademie für direkte, indirekte, zufällige, besondere, Folge- oder Strafschäden, einschließlich, aber nicht beschränkt auf Schäden durch entgangenen Gewinn, Verlust von Geschäftswert, Nutzung, Daten oder andere immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus der Nutzung oder Leistung von Portfolio ergeben oder damit in Zusammenhang stehen.',
   legalIndemnityTitle: 'Schadloshaltung',
   legalIndemnityText:
-    'Du erklärst dich damit einverstanden, uns, die genannten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Direktoren, Beauftragten und Mitarbeiter von allen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus deiner Nutzung von Portfolio und/oder deinem Verstoß gegen dieses Impressum ergeben oder damit zusammenhängen.',
-  legalContact: 'Bei Fragen oder Mitteilungen kontaktiere uns bitte unter jhildebrand94@googlemail.com.',
+    'Sie erklären sich damit einverstanden, uns, die genannten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Direktoren, Beauftragten und Mitarbeiter von allen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Verbindlichkeiten (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen dieses Impressum ergeben oder damit zusammenhängen.',
+  legalContact: 'Bei Fragen oder Mitteilungen kontaktieren Sie uns bitte unter jhildebrand94@googlemail.com.',
   legalDate: 'Stand: 22. Juni 2026',
 };
 
@@ -97,20 +97,20 @@ const translations: Record<Lang, Texts> = {
     aboutTitle: "Let's\u00A0work\ntogether",
     aboutSubtitle: 'I am',
     aboutFactLocation: 'located in Puebla',
-    aboutFactRemote: 'open to work remote',
+    aboutFactRemote: 'open to remote work',
     aboutBio1:
-      'I am a passionate frontend developer who loves turning ideas into clean, lively web interfaces. Learning new technologies drives me — every day is a chance to get better.',
+      'What fascinates me about frontend development is watching an idea grow into a thoughtful, lively interface. The interplay of clear logic and good design is what drives me. That enthusiasm keeps me curious and open to continually working my way into new technologies.',
     aboutBio2:
-      'I approach challenges analytically and look for the most elegant solution. Curiosity, persistence and good teamwork matter most to me.',
+      'I approach problems analytically while keeping the creative side in view. Often the most elegant solution emerges from exactly that combination. I see every challenge as an opportunity to learn something new and to grow.',
     aboutCta: 'Send a message',
     titleWork: 'My work',
     workSubtitle:
       'Explore a selection of my work here. Interact with projects to see my skills in action.',
     workDescPollo:
-      'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      'Jump, run and throw game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
     workDescPoke:
-      'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-    refTitle: 'Need a teamplayer?',
+      'Based on the PokéAPI, a simple library that provides and catalogues Pokémon information.',
+    refTitle: 'Need a team player?',
     refSubtitle: 'Here is what my colleagues say about me.',
     refQuoteJames:
       '"Jonas is a reliable and friendly teammate. He works in a structured way and writes clean code — I would gladly work with him again."',
@@ -136,7 +136,7 @@ const translations: Record<Lang, Texts> = {
     contactMe: 'Need a Frontend developer?',
     contactMeAccent: 'Contact me!',
     contactSending: 'Sending …',
-    contactSuccess: "Thanks! Your message arrived, I'll get back to you soon.",
+    contactSuccess: "Thanks! Your message arrived.",
     contactError: "Oops, that didn't work. Please try again later.",
     footerLegal: 'Legal Notice',
     legalTitle: 'Legal Notice',
@@ -172,25 +172,25 @@ const translations: Record<Lang, Texts> = {
     skills: 'Habilidades',
     work: 'Mi trabajo',
     greeting: '¡Hola! Soy Jonas',
-    scroll: 'Desplázate',
-    scrollDown: 'Desplázate hacia abajo',
+    scroll: 'Desplácese',
+    scrollDown: 'Desplácese hacia abajo',
     aboutTitle: 'Trabajemos\njuntos',
     aboutSubtitle: 'Yo soy',
     aboutFactLocation: 'Ubicado en Puebla',
     aboutFactRemote: 'abierto a trabajo remoto',
     aboutBio1:
-      'Soy un desarrollador frontend apasionado al que le encanta convertir ideas en interfaces web limpias y dinámicas. Aprender nuevas tecnologías me motiva: cada día es una oportunidad para mejorar.',
+      'Lo que me fascina del desarrollo frontend es ver cómo una idea se convierte en una interfaz cuidada y dinámica. La combinación de una lógica clara y un buen diseño es lo que me impulsa. Ese entusiasmo me mantiene curioso y abierto a adentrarme constantemente en nuevas tecnologías.',
     aboutBio2:
-      'Afronto los retos de forma analítica y busco la solución más elegante. Para mí, lo más importante es la curiosidad, la perseverancia y el buen trabajo en equipo.',
-    aboutCta: 'Envian mensaje',
+      'Afronto los problemas de forma analítica sin perder de vista el lado creativo. A menudo la solución más elegante surge precisamente de esa combinación. Cada reto lo veo como una oportunidad para aprender algo nuevo y crecer.',
+    aboutCta: 'Envíe un mensaje',
     titleWork: 'Mis trabajos',
     workSubtitle:
-      'Descubren aquí una selección de mis trabajos. Interactúan con los proyectos para ver mis habilidades en acción.',
+      'Descubra aquí una selección de mis trabajos. Interactúe con los proyectos para ver mis habilidades en acción.',
     workDescPollo:
-      'Juego de saltar, correr y lanzar basado en programación orientada a objetos. Ayuda a Pepe a encontrar monedas y salsa de tabasco para luchar contra el pollo loco.',
+      'Juego de saltar, correr y lanzar basado en programación orientada a objetos. Ayude a Pepe a encontrar monedas y salsa de tabasco para luchar contra el pollo loco.',
     workDescPoke:
       'Basado en la PokéAPI, una sencilla biblioteca que proporciona y cataloga información de Pokémon.',
-    refTitle: '¿Necesitan un jugador de equipo?',
+    refTitle: '¿Necesita un jugador de equipo?',
     refSubtitle: 'Esto es lo que dicen mis colegas sobre mí.',
     refQuoteJames:
       '«Jonas es un compañero fiable y amable. Trabaja de forma estructurada y escribe código limpio; trabajaría con él de nuevo sin dudarlo.»',
@@ -204,20 +204,20 @@ const translations: Record<Lang, Texts> = {
     contactPrivacyBefore: 'He leído la ',
     contactPrivacyLink: 'política de privacidad',
     contactPrivacyAfter: ' y acepto el tratamiento de mis datos.',
-    contactSend: 'Saludan ;)',
-    contactErrName: 'Introducen su nombre',
+    contactSend: 'Enviar ;)',
+    contactErrName: 'Introduzca su nombre',
     contactErrEmailRequired: 'El correo es obligatorio',
-    contactErrEmailInvalid: 'Introducen un correo válido',
-    contactErrMessage: 'Escriben un mensaje',
-    contactErrPrivacy: 'Aceptan la política de privacidad',
+    contactErrEmailInvalid: 'Introduzca un correo válido',
+    contactErrMessage: 'Escriba un mensaje',
+    contactErrPrivacy: 'Acepte la política de privacidad',
     contactTitle: 'Contacto',
-    contactProblem: '¿Tienen un problema para resolver?',
-    contactText: 'Escríbemen a través del formulario y te responderé lo antes posible.',
-    contactMe: '¿Necesitas un desarrollador frontend?',
-    contactMeAccent: '¡Contáctame!',
+    contactProblem: '¿Tiene un problema para resolver?',
+    contactText: 'Escríbame a través del formulario y le responderé lo antes posible.',
+    contactMe: '¿Necesita un desarrollador frontend?',
+    contactMeAccent: '¡Contácteme!',
     contactSending: 'Enviando …',
     contactSuccess: '¡Gracias! Su mensaje ha llegado.',
-    contactError: 'Uy, algo salió mal. Inténtalo de nuevo más tarde.',
+    contactError: 'Uy, algo salió mal. Inténtelo de nuevo más tarde.',
     footerLegal: 'Aviso legal',
     legalTitle: 'Aviso legal',
     legalImprintTitle: 'Datos identificativos',
@@ -226,7 +226,7 @@ const translations: Record<Lang, Texts> = {
     legalMail: 'E-Mail: jhildebrand94@googlemail.com',
     legalAcceptanceTitle: 'Aceptación de los términos',
     legalAcceptanceText:
-      'Al acceder y utilizar Portfolio (el Producto), reconoces y aceptas los siguientes términos y condiciones, así como cualquier política, directriz o modificación que se te pueda presentar ocasionalmente. Nosotros, los estudiantes mencionados, podemos actualizar o modificar los términos y condiciones en cualquier momento y sin previo aviso.',
+      'Al acceder y utilizar Portfolio (el Producto), reconoce y acepta los siguientes términos y condiciones, así como cualquier política, directriz o modificación que se le pueda presentar ocasionalmente. Nosotros, los estudiantes mencionados, podemos actualizar o modificar los términos y condiciones en cualquier momento y sin previo aviso.',
     legalScopeTitle: 'Alcance y propiedad del producto',
     legalScopeText:
       'Portfolio se ha desarrollado como parte de un proyecto grupal de estudiantes en un bootcamp de desarrollo web de Developer Akademie GmbH. Tiene una finalidad educativa y no está destinado a un uso personal o comercial extensivo. Por ello, no podemos garantizar de forma continuada la disponibilidad, fiabilidad, exactitud ni ningún otro aspecto de calidad de este Producto. El diseño de Portfolio es propiedad de Developer Akademie GmbH. Queda estrictamente prohibido el uso, la reproducción, la modificación, la distribución o la replicación no autorizados del diseño.',
@@ -235,14 +235,14 @@ const translations: Record<Lang, Texts> = {
       'Aparte del diseño, propiedad de Developer Akademie GmbH, nosotros, los estudiantes mencionados, conservamos todos los derechos de propiedad sobre Portfolio, incluido cualquier material protegido por derechos de autor, marcas comerciales y otra información protegida asociada.',
     legalUseTitle: 'Uso del producto',
     legalUseText:
-      'Portfolio está destinado a utilizarse únicamente con fines lícitos, de acuerdo con todas las leyes y normativas aplicables. Queda estrictamente prohibido cualquier uso de Portfolio para actividades ilegales o para acosar, dañar, amenazar o intimidar a otra persona. Eres el único responsable de tus interacciones con otros usuarios de Portfolio.',
+      'Portfolio está destinado a utilizarse únicamente con fines lícitos, de acuerdo con todas las leyes y normativas aplicables. Queda estrictamente prohibido cualquier uso de Portfolio para actividades ilegales o para acosar, dañar, amenazar o intimidar a otra persona. Es usted el único responsable de sus interacciones con otros usuarios de Portfolio.',
     legalDisclaimerTitle: 'Exención de garantías y limitación de responsabilidad',
     legalDisclaimerText:
       'Portfolio se proporciona "tal cual", sin garantía de ningún tipo, ya sea expresa o implícita, incluidas, entre otras, las garantías implícitas de comerciabilidad, idoneidad para un fin determinado y no infracción. En ningún caso nosotros, los estudiantes mencionados, ni Developer Akademie seremos responsables de daños directos, indirectos, incidentales, especiales, consecuentes o punitivos, incluidos, entre otros, los daños por pérdida de beneficios, fondo de comercio, uso, datos u otras pérdidas intangibles, incluso si se nos ha advertido de la posibilidad de dichos daños, que se deriven del uso o el rendimiento de Portfolio o estén relacionados con ellos.',
     legalIndemnityTitle: 'Indemnización',
     legalIndemnityText:
-      'Aceptas indemnizar, defender y eximir de responsabilidad a nosotros, los estudiantes mencionados, a Developer Akademie y a nuestras filiales, socios, directivos, directores, agentes y empleados, frente a cualquier reclamación, demanda, pérdida, daño, coste o responsabilidad (incluidos los honorarios legales razonables) que se derive de tu uso de Portfolio o de tu incumplimiento de este aviso legal, o que esté relacionado con ellos.',
-    legalContact: 'Para cualquier pregunta o notificación, contáctanos en jhildebrand94@googlemail.com.',
+      'Acepta indemnizar, defender y eximir de responsabilidad a nosotros, los estudiantes mencionados, a Developer Akademie y a nuestras filiales, socios, directivos, directores, agentes y empleados, frente a cualquier reclamación, demanda, pérdida, daño, coste o responsabilidad (incluidos los honorarios legales razonables) que se derive de su uso de Portfolio o de su incumplimiento de este aviso legal, o que esté relacionado con ellos.',
+    legalContact: 'Para cualquier pregunta o notificación, contáctenos en jhildebrand94@googlemail.com.',
     legalDate: 'Fecha: 22 de junio de 2026',
   },
 };

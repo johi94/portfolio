@@ -87,31 +87,41 @@
     }
 
     &__nav {
-      display: none;
       position: absolute;
       top: 100%;
       left: 0;
       right: 0;
       flex-direction: column;
       align-items: flex-end;
-      gap: space('l');
-      padding: space('l');
+      gap: space('s');
+      padding-right: space('l');
       background: rgba(255, 255, 255, 0.97);
       backdrop-filter: blur(10px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition:
+        opacity $transition-fast,
+        transform $transition-fast,
+        visibility $transition-fast;
       @include respond(mobile) {
         align-items: center;
+        padding-top: space('xxl');
+        padding-bottom: space('xxl');
       }
     }
 
     &--menu-open &__nav {
-      display: flex;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
     }
 
     &__menu {
       flex-direction: column;
       align-items: flex-end;
-      gap: space('m');
+      gap: space('s');
       @include respond(mobile) {
         align-items: center;
       }

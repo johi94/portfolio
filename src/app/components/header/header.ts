@@ -1,4 +1,4 @@
-import { Component, inject, signal, HostListener } from '@angular/core';
+import { Component, inject, signal, HostListener, ElementRef } from '@angular/core';
 import { Translation } from '../../services/translation';
 import { Router, NavigationEnd, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -14,9 +14,10 @@ import { Logo } from '../logo/logo';
 export class Header {
   translation = inject(Translation);
   private router = inject(Router);
+   private elementRef = inject(ElementRef);
   isScrolled = signal(false);
   menuOpen = signal(false);
-
+ 
   toggleMenu() {
     this.menuOpen.update((open) => !open);
   }
@@ -36,5 +37,18 @@ export class Header {
   @HostListener('window:scroll')
   onScroll() {
     this.isScrolled.set(window.scrollY > 0);
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape() {
+    this.closeMenu();
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    if (!this.menuOpen()) return;
+    if (!this.elementRef.nativeElement.contains(event.target as Node)) {
+      this.closeMenu();
+    }
   }
 }
