@@ -1,0 +1,129 @@
+@use '../../../scss/abstracts' as *;
+
+.privacy {
+  position: relative;
+  max-width: rem(1440px);
+  margin: 0 auto;
+  overflow: clip;
+
+  &__back {
+    @include hover-lift;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: rem(-42px);
+    position: sticky;
+    top: rem(120px);
+    z-index: 1;
+
+    @include respond(tablet) {
+      top: rem(220px);
+    }
+
+    @include respond(mobile) {
+    top: rem(380px); 
+    }
+  }
+
+  &__inner {
+    max-width: rem(1000px);
+    margin: 0 auto;
+    padding: space('xxl') space('l');
+    padding-right: calc(#{space('l')} + #{rem(42px)});
+
+    h1 {
+      @include font-size(rem(90px), rem(60px), rem(40px));
+      font-family: $font-family-heading;
+      font-weight: 700;
+      color: $color-blue;
+      margin: 0 0 space('m');
+    }
+
+    h2 {
+      @include font-size(rem(32px), rem(24px));
+      font-family: $font-family-heading;
+      font-weight: 700;
+      color: $color-blue;
+      margin: space('xl') 0 space('s');
+    }
+
+    h3 {
+      @include font-size(rem(20px));
+      font-weight: 700;
+      color: $color-blue;
+      margin: space('l') 0 space('xxs');
+    }
+
+    h4 {
+      @include font-size(rem(16px));
+      font-weight: 700;
+      color: $color-blue;
+      margin: space('m') 0 space('xxs');
+    }
+
+    p {
+      @include font-size(rem(16px));
+      line-height: 1.6;
+      color: $color-blk;
+      margin: 0 0 space('m');
+    }
+
+    ul {
+      margin: 0 0 space('m');
+      padding-left: space('l');
+    }
+
+    li {
+      @include font-size(rem(16px));
+      line-height: 1.6;
+      color: $color-blk;
+      margin-bottom: space('xxs');
+    }
+
+    a {
+      color: $color-blue;
+      text-decoration: underline;
+      overflow-wrap: break-word;
+      transition: color $transition-fast;
+
+      &:hover {
+        color: $color-blue-dark;
+      }
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__circle--1 {
+    @include decorative-circle(rem(120px));
+    bottom: rem(450px);
+    left: rem(-20px);
+
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  &__circle--2 {
+    @include decorative-circle(rem(170px));
+    top: rem(200px);
+    right: rem(100px);
+
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+
+  &__circle--3 {
+    @include decorative-circle(rem(90px));
+    top: rem(650px);
+    right: rem(-20px);
+
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+}

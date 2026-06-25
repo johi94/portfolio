@@ -11,6 +11,7 @@ import { Translation } from '../../services/translation';
 import { Button } from '../button/button';
 import { ScrollTop } from '../scroll-top/scroll-top';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 function noWhitespace(control: AbstractControl): ValidationErrors | null {
   const value = control.value as string;
@@ -20,7 +21,7 @@ function noWhitespace(control: AbstractControl): ValidationErrors | null {
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, Button, ScrollTop],
+  imports: [ReactiveFormsModule, Button, ScrollTop, RouterLink],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
@@ -28,8 +29,7 @@ export class Contact {
   status = signal<'idle' | 'sending' | 'success' | 'error'>('idle');
   translation = inject(Translation);
   private http = inject(HttpClient);
-  private readonly accessKey = '85e3880e-f07c-44cd-86aa-8319f3a191de';
-
+  
   contactForm = new FormGroup({
     userForm: new FormGroup({
       name: new FormControl('', {
@@ -52,9 +52,9 @@ export class Contact {
   this.status.set('sending');
 
   const { userForm, message } = this.contactForm.getRawValue();
-  const payload = { access_key: this.accessKey, name: userForm.name, email: userForm.email, message };
+  const payload = { name: userForm.name, email: userForm.email, message };
 
-  this.http.post('https://api.web3forms.com/submit', payload).subscribe({
+  this.http.post('https://jonas-hildebrand.de/sendmail.php', payload).subscribe({
     next: () => {
       this.status.set('success');
       this.contactForm.reset();      

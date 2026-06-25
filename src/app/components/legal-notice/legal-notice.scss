@@ -22,6 +22,14 @@
     position: sticky;
     top: rem(120px);
     z-index: 1;
+
+    @include respond(tablet) {
+    top: rem(220px); 
+    }
+
+    @include respond(mobile) {
+    top: rem(350px); 
+    }
   }
 
   &__title {

@@ -26,7 +26,7 @@ export class Work {
       descriptionKey: 'workDescPollo',
       image: 'img/pollo_loco.png',
       githubUrl: 'https://github.com/johi94/El_Pollo_Loco/tree/main',
-      liveUrl: 'https://youtube.com',
+      liveUrl: 'https://pollo-loco.jonas-hildebrand.de',
     },
     {
       title: 'Pokédex',
@@ -34,7 +34,7 @@ export class Work {
       descriptionKey: 'workDescPoke',
       image: 'img/pokedex.png',
       githubUrl: 'https://github.com/johi94/Poked-x',
-      liveUrl: 'https://youtube.com',
+      liveUrl: 'https://pokedex.jonas-hildebrand.de',
     },
   ];
 }
