@@ -15,7 +15,7 @@ import { RouterLink } from '@angular/router';
 
 function noWhitespace(control: AbstractControl): ValidationErrors | null {
   const value = control.value as string;
-  if (!value) return null;          
+  if (!value) return null;
   return value.trim().length === 0 ? { whitespace: true } : null;
 }
 
@@ -29,7 +29,7 @@ export class Contact {
   status = signal<'idle' | 'sending' | 'success' | 'error'>('idle');
   translation = inject(Translation);
   private http = inject(HttpClient);
-  
+
   contactForm = new FormGroup({
     userForm: new FormGroup({
       name: new FormControl('', {
@@ -45,21 +45,22 @@ export class Contact {
     privacy: new FormControl(false, {
       validators: [Validators.requiredTrue],
     }),
+    website: new FormControl(''),
   });
 
   onSubmit() {
-  if (this.contactForm.invalid) return;
-  this.status.set('sending');
+    if (this.contactForm.invalid) return;
+    this.status.set('sending');
 
-  const { userForm, message } = this.contactForm.getRawValue();
-  const payload = { name: userForm.name, email: userForm.email, message };
+    const { userForm, message, website } = this.contactForm.getRawValue();
+    const payload = { name: userForm.name, email: userForm.email, message, website };
 
-  this.http.post('https://jonas-hildebrand.de/sendmail.php', payload).subscribe({
-    next: () => {
-      this.status.set('success');
-      this.contactForm.reset();      
-    },
-    error: () => this.status.set('error'),
-  });
-}
+    this.http.post('https://jonas-hildebrand.de/sendmail.php', payload).subscribe({
+      next: () => {
+        this.status.set('success');
+        this.contactForm.reset();
+      },
+      error: () => this.status.set('error'),
+    });
+  }
 }

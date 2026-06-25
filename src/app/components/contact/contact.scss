@@ -77,8 +77,8 @@
     margin-bottom: space('l');
 
     @include respond(mobile) {
-    margin-bottom: space('xl');   
-  }
+      margin-bottom: space('xl');
+    }
   }
 
   &__field &__input {
@@ -139,7 +139,7 @@
   }
 
   &__privacy + &__error {
-    padding-left: calc(#{rem(16px)} + #{space('xs')}); 
+    padding-left: calc(#{rem(16px)} + #{space('xs')});
   }
 
   &__link {
@@ -192,5 +192,13 @@
     @include respond(tablet) {
       display: none;
     }
+  }
+
+  &__hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
   }
 }

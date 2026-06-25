@@ -1,9 +1,9 @@
 <section class="contact" id="contact">
-<div class="contact__inner">
-  <span class="contact__circle contact__circle--1" aria-hidden="true"></span>
-  <span class="contact__circle contact__circle--2" aria-hidden="true"></span>
-  <span class="contact__circle contact__circle--3" aria-hidden="true"></span>
-  
+  <div class="contact__inner">
+    <span class="contact__circle contact__circle--1" aria-hidden="true"></span>
+    <span class="contact__circle contact__circle--2" aria-hidden="true"></span>
+    <span class="contact__circle contact__circle--3" aria-hidden="true"></span>
+
     <h2 class="contact__label">{{ translation.t().contactTitle }}</h2>
     <div class="contact__columns">
       <div class="contact__intro">
@@ -15,6 +15,14 @@
         </p>
       </div>
       <form class="contact__form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <input
+          type="text"
+          formControlName="website"
+          class="contact__hp"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+        />
         <div class="contact__group" formGroupName="userForm">
           <div class="contact__field">
             <input
@@ -68,7 +76,9 @@
             <input type="checkbox" formControlName="privacy" />
             <span
               >{{ translation.t().contactPrivacyBefore
-              }}<a class="contact__link" routerLink="/privacy-policy">{{ translation.t().contactPrivacyLink }}</a
+              }}<a class="contact__link" routerLink="/privacy-policy">{{
+                translation.t().contactPrivacyLink
+              }}</a
               >{{ translation.t().contactPrivacyAfter }}</span
             >
           </label>
