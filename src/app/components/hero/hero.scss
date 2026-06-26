@@ -9,7 +9,8 @@
   &__inner {
     @include container;
     @include flex($gap: space('l'));
-    min-height: calc(100vh - 80px);
+    min-height: calc(100dvh - 80px);
+    height: calc(100dvh - 80px);
     position: relative;
 
     @include respond(mobile) {
@@ -62,7 +63,7 @@
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: calc(100vh - 150px);
+    max-height: calc(100dvh - 150px);
     position: relative;
     left: -5%;
 
@@ -179,7 +180,7 @@
 
     &-line {
       width: 2px;
-      height: clamp(rem(140px), 30vh, rem(320px));
+      height: clamp(rem(140px), 25vh, rem(300px));
       background: $color-blue;
     }
   }
@@ -189,7 +190,7 @@
     @include flex-column($gap: space('m'));
     position: absolute;
     right: space('l');
-    bottom: space('xxxl');
+    bottom: space('xxl');
 
     img {
       display: block;
