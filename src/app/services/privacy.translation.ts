@@ -1,5 +1,5 @@
 export const privacyDe = {
-  privacyTitle: 'Datenschutz­erklärung',
+  privacyTitle: 'Datenschutzerklärung',
   privacy1Title: '1. Datenschutz auf einen Blick',
   privacy1GeneralTitle: 'Allgemeine Hinweise',
   privacy1GeneralText:
@@ -34,7 +34,7 @@ export const privacyDe = {
   privacy2AvvTitle: 'Auftragsverarbeitung',
   privacy2AvvText:
     'Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des oben genannten Dienstes geschlossen. Hierbei handelt es sich um einen datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass dieser die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.',
-  privacy3Title: '3. Allgemeine Hinweise und Pflichttinformationen',
+  privacy3Title: '3. Allgemeine Hinweise und Pflichtinformationen',
   privacy3DpTitle: 'Datenschutz',
   privacy3DpText1:
     'Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.',
