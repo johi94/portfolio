@@ -18,7 +18,7 @@
     }
 
     @include respond-up(widescreen) {
-      min-height: auto;
+      height: calc(100dvh - 1000px);
       align-items: stretch;
     }
   }
@@ -35,7 +35,7 @@
       content: '';
       position: absolute;
       top: rem(-100px);
-      left: -10%;
+      left: 10%;
       transform: translateX(-50%);
 
       @include respond(mobile) {
@@ -53,8 +53,9 @@
     }
 
     @include respond-up(widescreen) {
-      align-items: stretch;
+      align-items: flex-end;
       align-self: stretch;
+      min-width: 0;
     }
   }
 
@@ -65,22 +66,26 @@
     max-width: 100%;
     max-height: calc(100dvh - 150px);
     position: relative;
+    align-self: flex-end;
     left: -5%;
 
     @include respond(mobile) {
-      height: 50dvh; 
+      height: 50dvh;
       max-height: 100%;
-      max-width: none; 
+      max-width: none;
       width: auto;
       left: 0;
       bottom: 0;
     }
 
     @include respond-up(widescreen) {
-      height: 100%;
+      height: 80%;
       max-height: none;
       width: auto;
-      left: -20%;
+      max-width: none;
+      align-self: flex-end;
+      left: 0%;
+      bottom: 0;
     }
   }
 
@@ -99,7 +104,8 @@
 
     @include respond-up(widescreen) {
       text-align: right;
-      top: space('xxxl');
+      justify-content: center;
+      top: 0;
     }
   }
 
@@ -149,6 +155,8 @@
     bottom: 0%;
     left: 75%;
     transform: translateX(-50%);
+   
+
 
     @include respond(mobile) {
       left: auto;
@@ -180,9 +188,10 @@
 
     &-line {
       width: 2px;
-      height: clamp(rem(140px), 25vh, rem(300px));
+      height: clamp(rem(80px), 14vh, rem(220px)); 
       background: $color-blue;
     }
+
   }
 
   &__socials {
@@ -190,7 +199,7 @@
     @include flex-column($gap: space('m'));
     position: absolute;
     right: space('l');
-    bottom: space('xxl');
+    bottom: space('s');
 
     img {
       display: block;
