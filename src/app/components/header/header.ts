@@ -14,16 +14,21 @@ import { Logo } from '../logo/logo';
 export class Header {
   translation = inject(Translation);
   private router = inject(Router);
-   private elementRef = inject(ElementRef);
+  private elementRef = inject(ElementRef);
   isScrolled = signal(false);
   menuOpen = signal(false);
- 
+
   toggleMenu() {
     this.menuOpen.update((open) => !open);
   }
 
   closeMenu() {
     this.menuOpen.set(false);
+  }
+
+  changeLang(lang: 'DE' | 'EN' | 'ES') {
+    this.translation.setLang(lang);
+    this.closeMenu();
   }
 
   isHome = toSignal(

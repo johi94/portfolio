@@ -51,7 +51,7 @@
                 @if (emailCtrl.hasError('required')) {
                   {{ translation.t().contactErrEmailRequired }}
                 }
-                @if (emailCtrl.hasError('email')) {
+                @if (emailCtrl.hasError('pattern')) {
                   {{ translation.t().contactErrEmailInvalid }}
                 }
               }

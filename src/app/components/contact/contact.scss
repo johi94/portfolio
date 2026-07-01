@@ -77,7 +77,7 @@
     margin-bottom: space('l');
 
     @include respond(mobile) {
-      margin-bottom: space('xl');
+      margin-bottom: space('xxl');
     }
   }
 

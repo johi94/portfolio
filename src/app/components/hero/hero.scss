@@ -10,16 +10,27 @@
     @include container;
     @include flex($gap: space('l'));
     min-height: calc(100dvh - 80px);
-    height: calc(100dvh - 80px);
+    align-items: center;
     position: relative;
 
     @include respond(mobile) {
       flex-direction: column-reverse;
+      padding-top: space('xxxl');
+
+      @media (max-height: 600px) {
+        gap: space('xs');
+        justify-content: center;
+        padding-top: 0;
+      }
+
+      @media (max-height: 400px) {
+        flex-direction: row;
+        padding-top: 0;
+      }
     }
 
     @include respond-up(widescreen) {
-      height: calc(100dvh - 1000px);
-      align-items: stretch;
+      min-height: min(100dvh - 80px, rem(1350px));
     }
   }
 
@@ -31,7 +42,7 @@
     align-items: flex-end;
 
     &::before {
-      @include decorative-circle(clamp(rem(360px), 80vw, rem(820px)));
+      @include decorative-circle(min(clamp(rem(360px), 80vw, rem(820px)), 85dvh));
       content: '';
       position: absolute;
       top: rem(-100px);
@@ -39,10 +50,23 @@
       transform: translateX(-50%);
 
       @include respond(mobile) {
-        width: 90dvh;
-        height: 100dvh;
+        width: 150vw;
+        height: 150vw;
         left: 50%;
-        transform: translate(-85%, -470px);
+        transform: translate(-85%, -400px);
+
+        @media (max-height: 600px) {
+          width: 150dvh;
+          height: 150dvh;
+          transform: translate(-85%, -65%);
+        }
+
+        @media (max-height: 400px) {
+          width: 90dvh;
+          height: 90dvh;
+          left: 10%;
+          transform: translate(-50%, -20%);
+        }
       }
     }
 
@@ -64,7 +88,7 @@
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: calc(100dvh - 150px);
+    max-height: min(100dvh - 150px, rem(760px));
     position: relative;
     align-self: flex-end;
     left: -5%;
@@ -76,11 +100,18 @@
       width: auto;
       left: 0;
       bottom: 0;
+
+      @media (max-height: 600px) {
+        height: 65dvh;
+      }
+
+      @media (max-height: 400px) {
+        height: 90dvh;
+        width: auto;
+      }
     }
 
     @include respond-up(widescreen) {
-      height: 80%;
-      max-height: none;
       width: auto;
       max-width: none;
       align-self: flex-end;
@@ -96,10 +127,22 @@
     position: relative;
     bottom: space('xxxl');
 
+    @media (max-height: 600px) {
+      bottom: space('xxl');
+    }
+
+    @media (max-height: 600px) and (min-width: 769px) {
+      right: space('xxl');
+    }
+
     @include respond(mobile) {
-      top: space('m');
+      top: space('xxs');
       bottom: 0;
       align-self: stretch;
+
+      @media (max-height: 600px) {
+        top: 0;
+      }
     }
 
     @include respond-up(widescreen) {
@@ -120,6 +163,10 @@
       color: $color-bg;
       font-size: clamp(rem(18px), 4vw, rem(25px));
     }
+
+    @media (max-height: 400px) {
+      color: $color-blue;
+    }
   }
 
   &__title {
@@ -131,11 +178,19 @@
     color: $color-blue;
     text-transform: uppercase;
 
+    @media (max-height: 600px) {
+      font-size: clamp(rem(32px), 6.5vw, rem(56px));
+    }
+
     &-line {
       display: block;
 
       &--bottom {
         font-size: clamp(rem(48px), 8.5vw, rem(130px));
+
+        @media (max-height: 600px) {
+          font-size: clamp(rem(28px), 6vw, rem(52px));
+        }
 
         @include respond(mobile) {
           font-size: clamp(rem(30px), 8vw, rem(68px));
@@ -146,7 +201,9 @@
     @include respond(mobile) {
       color: $color-bg;
       font-size: clamp(rem(32px), 8.5vw, rem(72px));
+      
     }
+     @media (max-height: 400px) { color: $color-blue; }
   }
 
   &__scroll {
@@ -155,12 +212,11 @@
     bottom: 0%;
     left: 75%;
     transform: translateX(-50%);
-   
-
 
     @include respond(mobile) {
       left: auto;
       right: space('xs');
+      bottom: space('xl');
       transform: none;
     }
 
@@ -188,10 +244,12 @@
 
     &-line {
       width: 2px;
-      height: clamp(rem(80px), 14vh, rem(220px)); 
+      height: clamp(rem(80px), 14vh, rem(220px));
       background: $color-blue;
+      @include respond(mobile) {
+        display: none;
+      }
     }
-
   }
 
   &__socials {

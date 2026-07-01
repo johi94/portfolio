@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class ScrollTop {
   scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0 });
   }
 }

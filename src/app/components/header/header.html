@@ -28,11 +28,11 @@
     </ul>
 
     <div class="header__lang">
-      <button (click)="translation.setLang('DE')" [class.active]="translation.activeLang() === 'DE'">DE</button>
+      <button (click)="changeLang('DE')" [class.active]="translation.activeLang() === 'DE'">DE</button>
       <span>/</span>
-      <button (click)="translation.setLang('EN')" [class.active]="translation.activeLang() === 'EN'">EN</button>
+      <button (click)="changeLang('EN')" [class.active]="translation.activeLang() === 'EN'">EN</button>
       <span>/</span>
-      <button (click)="translation.setLang('ES')" [class.active]="translation.activeLang() === 'ES'">ES</button>
+      <button (click)="changeLang('ES')" [class.active]="translation.activeLang() === 'ES'">ES</button>
     </div>
   </nav>
 </header>

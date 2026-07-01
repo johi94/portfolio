@@ -19,6 +19,8 @@ function noWhitespace(control: AbstractControl): ValidationErrors | null {
   return value.trim().length === 0 ? { whitespace: true } : null;
 }
 
+const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 @Component({
   selector: 'app-contact',
   imports: [ReactiveFormsModule, Button, ScrollTop, RouterLink],
@@ -36,7 +38,7 @@ export class Contact {
         validators: [Validators.required, Validators.minLength(3), noWhitespace],
       }),
       email: new FormControl('', {
-        validators: [Validators.required, Validators.email, noWhitespace],
+        validators: [Validators.required, Validators.pattern(emailPattern), noWhitespace],
       }),
     }),
     message: new FormControl('', {
@@ -45,7 +47,7 @@ export class Contact {
     privacy: new FormControl(false, {
       validators: [Validators.requiredTrue],
     }),
-    website: new FormControl(''),
+    website: new FormControl(''), 
   });
 
   onSubmit() {
