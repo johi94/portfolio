@@ -4,7 +4,7 @@
   position: relative;
   max-width: rem(1440px);
   margin: 0 auto;
-  overflow: clip;
+  
 
   &__back {
     @include hover-lift;
@@ -31,6 +31,7 @@
     padding: space('xxl') space('l');
     padding-right: calc(#{space('l')} + #{rem(42px)});
     overflow-wrap: break-word;
+    hyphens: auto;
 
     h1 {
       @include font-size(rem(70px), rem(60px), rem(40px));
