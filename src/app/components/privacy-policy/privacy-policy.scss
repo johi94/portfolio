@@ -30,9 +30,10 @@
     margin: 0 auto;
     padding: space('xxl') space('l');
     padding-right: calc(#{space('l')} + #{rem(42px)});
+    overflow-wrap: break-word;
 
     h1 {
-      @include font-size(rem(90px), rem(60px), rem(40px));
+      @include font-size(rem(70px), rem(60px), rem(40px));
       font-family: $font-family-heading;
       font-weight: 700;
       color: $color-blue;

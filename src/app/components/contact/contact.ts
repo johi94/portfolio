@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, OnDestroy } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -12,6 +12,7 @@ import { Button } from '../button/button';
 import { ScrollTop } from '../scroll-top/scroll-top';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
+import { ContactStore } from '../../services/contact-store';
 
 function noWhitespace(control: AbstractControl): ValidationErrors | null {
   const value = control.value as string;
@@ -27,10 +28,21 @@ const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-export class Contact {
+export class Contact implements OnDestroy {
   status = signal<'idle' | 'sending' | 'success' | 'error'>('idle');
   translation = inject(Translation);
   private http = inject(HttpClient);
+  private store = inject(ContactStore);
+
+  constructor() {
+    if (this.store.saved) {
+      this.contactForm.patchValue(this.store.saved);
+    }
+  }
+
+  ngOnDestroy() {
+    this.store.saved = this.contactForm.getRawValue();
+  }
 
   contactForm = new FormGroup({
     userForm: new FormGroup({
@@ -47,7 +59,7 @@ export class Contact {
     privacy: new FormControl(false, {
       validators: [Validators.requiredTrue],
     }),
-    website: new FormControl(''), 
+    website: new FormControl(''),
   });
 
   onSubmit() {

@@ -193,7 +193,9 @@ export class Translation {
 
   constructor() {
     effect(() => {
-      localStorage.setItem('lang', this.activeLang());
+      const lang = this.activeLang();
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang.toLowerCase()
     });
   }
 
