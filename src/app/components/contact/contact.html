@@ -104,11 +104,6 @@
               {{ translation.t().contactSending }}
             </p>
           }
-          @case ('success') {
-            <p class="contact__feedback contact__feedback--success">
-              {{ translation.t().contactSuccess }}
-            </p>
-          }
           @case ('error') {
             <p class="contact__feedback contact__feedback--error">
               {{ translation.t().contactError }}
@@ -118,5 +113,13 @@
       </form>
     </div>
     <app-scroll-top></app-scroll-top>
+    @if (status() === 'success') {
+      <div class="contact__popup-backdrop" (click)="closePopup()">
+        <div class="contact__popup" role="alert" (click)="$event.stopPropagation()">
+          <button type="button" class="contact__popup-close" (click)="closePopup()"aria-label="Schließen">&times;</button>
+          <p class="contact__popup-text">{{ translation.t().contactSuccess }}</p>
+        </div>
+      </div>
+    }
   </div>
 </section>

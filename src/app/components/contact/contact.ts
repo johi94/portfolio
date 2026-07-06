@@ -33,6 +33,7 @@ export class Contact implements OnDestroy {
   translation = inject(Translation);
   private http = inject(HttpClient);
   private store = inject(ContactStore);
+  private closeTimer?: ReturnType<typeof setTimeout>;
 
   constructor() {
     if (this.store.saved) {
@@ -73,8 +74,14 @@ export class Contact implements OnDestroy {
       next: () => {
         this.status.set('success');
         this.contactForm.reset();
+        this.closeTimer = setTimeout(() => this.closePopup(), 3000);
       },
       error: () => this.status.set('error'),
     });
+  }
+
+    closePopup() {
+    clearTimeout(this.closeTimer);
+    this.status.set('idle');
   }
 }
