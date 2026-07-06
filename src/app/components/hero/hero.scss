@@ -68,6 +68,12 @@
           transform: translate(-50%, -20%);
         }
       }
+
+      @media (max-width: 360px) and (min-height: 601px) {
+        width: 160vw;
+        height: 160vw;
+        transform: translate(-80%, -360px);
+      }
     }
 
     @include respond(mobile) {
@@ -201,7 +207,6 @@
     @include respond(mobile) {
       color: $color-bg;
       font-size: clamp(rem(32px), 8.5vw, rem(72px));
-      
     }
      @media (max-height: 400px) { color: $color-blue; }
   }

@@ -2,6 +2,7 @@
   [class.header--scrolled]="isScrolled()"
   [class.header--home]="isHome()"
   [class.header--menu-open]="menuOpen()">
+ <div class="header__inner">
 
   <div class="header__logo">
     <a routerLink="/" class="header__logo" aria-label="Zur Startseite">
@@ -35,4 +36,5 @@
       <button (click)="changeLang('ES')" [class.active]="translation.activeLang() === 'ES'">ES</button>
     </div>
   </nav>
+ </div>
 </header>
