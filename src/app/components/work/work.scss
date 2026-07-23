@@ -125,11 +125,14 @@
   }
 
   &__circle--3 {
-    @include decorative-circle(clamp(rem(180px), 15dvw, rem(320px)));
+    @include decorative-circle(clamp(rem(180px), 15dvw, rem(280px)));
     top: 22%;
     left: 1%;
     @include respond(tablet) {
       top: 15%;
+    }
+    @include respond(mobile) {
+      top: 18%;
     }
   }
 
