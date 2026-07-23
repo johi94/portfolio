@@ -17,8 +17,7 @@ export class References {
   translation = inject(Translation);
   
   references: Reference[] = [
-    { name: 'James Rugman', project: 'Project Join', quoteKey: 'refQuoteJames' },
-    { name: 'Evelyn Marx', project: 'Project DA Bubble', quoteKey: 'refQuoteEvelyn' },
-    { name: 'Noah Müller', project: 'Project Pollo Loco', quoteKey: 'refQuoteNoah' },
-  ];
+  { name: 'W. Kasberg', project: 'Project Join', quoteKey: 'refQuoteKasberg' },
+  { name: 'A. Wojak', project: 'Project Join', quoteKey: 'refQuoteWojak' },
+];
 }

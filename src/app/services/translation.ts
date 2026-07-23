@@ -31,12 +31,10 @@ const de = {
     'Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.',
   refTitle: 'Brauchen Sie einen Teamplayer?',
   refSubtitle: 'Das sagen meine Kolleg:innen über mich.',
-  refQuoteJames:
-    '„Jonas ist ein zuverlässiger und freundlicher Teamkollege. Er arbeitet strukturiert und schreibt sauberen Code. Ich würde jederzeit wieder mit ihm zusammenarbeiten."',
-  refQuoteEvelyn:
-    '„Jonas ist ein vertrauenswürdiger Teamplayer, der auch unter Termindruck ruhig bleibt. Strukturierte Arbeit und klare Kommunikation."',
-  refQuoteNoah:
-    '„Jonas entwickelt durchdacht und arbeitet gut mit dem Team zusammen. Zuverlässig, freundlich und immer hilfsbereit."',
+  refQuoteKasberg:
+  'Jonas Hildebrand war ein äußerst zuverlässiger und geschätzter Kollege. Seine Aufgaben erledigte er stets besonders effizient, zügig und mit höchstem Qualitätsanspruch. Seine strukturierte Arbeitsweise, sein großes Engagement sowie die angenehme und vertrauensvolle Zusammenarbeit habe ich jederzeit sehr geschätzt.',
+refQuoteWojak:
+  'Jonas Hildebrand war ein zuverlässiges und wertvolles Mitglied unseres Teams. Seine Arbeit war stets konstant, konsequent und von hoher Qualität geprägt. Wir waren mit seiner Leistung und der angenehmen Zusammenarbeit sehr zufrieden.',
   contactNamePlaceholder: 'Ihr Name',
   contactEmailPlaceholder: 'Ihre E-Mail',
   contactMessagePlaceholder: 'Ihre Nachricht',
@@ -95,12 +93,10 @@ const translations: Record<Lang, Texts> = {
       'Based on the PokéAPI, a simple library that provides and catalogues Pokémon information.',
     refTitle: 'Need a team player?',
     refSubtitle: 'Here is what my colleagues say about me.',
-    refQuoteJames:
-      '"Jonas is a reliable and friendly teammate. He works in a structured way and writes clean code — I would gladly work with him again."',
-    refQuoteEvelyn:
-      '"Jonas is a trustworthy team player who stays calm under deadline pressure. Structured work and clear communication."',
-    refQuoteNoah:
-      '"Jonas develops thoughtfully and collaborates well with the team. Reliable, friendly and always willing to help."',
+   refQuoteKasberg:
+  'Jonas Hildebrand was an extremely reliable and highly valued colleague. He always completed his tasks with great efficiency, speed and the highest standards of quality. I greatly appreciated his structured way of working, his strong commitment and our pleasant, trusting collaboration at all times.',
+refQuoteWojak:
+  'Jonas Hildebrand was a reliable and valuable member of our team. His work was always steady, consistent and of high quality. We were very satisfied with his performance and the pleasant collaboration.',
     contactNamePlaceholder: 'Your name',
     contactEmailPlaceholder: 'Your email',
     contactMessagePlaceholder: 'Your message',
@@ -153,12 +149,10 @@ const translations: Record<Lang, Texts> = {
       'Basado en la PokéAPI, una sencilla biblioteca que proporciona y cataloga información de Pokémon.',
     refTitle: '¿Necesita un jugador de equipo?',
     refSubtitle: 'Esto es lo que dicen mis colegas sobre mí.',
-    refQuoteJames:
-      '«Jonas es un compañero fiable y amable. Trabaja de forma estructurada y escribe código limpio; trabajaría con él de nuevo sin dudarlo.»',
-    refQuoteEvelyn:
-      '«Jonas es un compañero de equipo de confianza que mantiene la calma bajo la presión de los plazos. Trabajo estructurado y comunicación clara.»',
-    refQuoteNoah:
-      '«Jonas desarrolla con criterio y colabora bien con el equipo. Fiable, amable y siempre dispuesto a ayudar.»',
+   refQuoteKasberg:
+  'Jonas Hildebrand fue un colega sumamente fiable y muy apreciado. Siempre realizó sus tareas con gran eficiencia, rapidez y el máximo nivel de calidad. Valoré mucho en todo momento su forma de trabajar estructurada, su gran compromiso y la colaboración agradable y de plena confianza.',
+refQuoteWojak:
+  'Jonas Hildebrand fue un miembro fiable y valioso de nuestro equipo. Su trabajo se caracterizó siempre por la constancia, la coherencia y una alta calidad. Quedamos muy satisfechos con su rendimiento y la agradable colaboración.',
     contactNamePlaceholder: 'Su nombre',
     contactEmailPlaceholder: 'Su correo',
     contactMessagePlaceholder: 'Su mensaje',
