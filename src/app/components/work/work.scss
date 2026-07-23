@@ -2,16 +2,13 @@
 
 .work {
   isolation: isolate;
+  overflow-x: clip;
 
   &__inner {
     @include container;
     padding-block: space('xxl');
     position: relative;
     isolation: isolate;
-
-    @include respond(widescreen) {
-      overflow: hidden;
-    }
   }
 
   &__title {
