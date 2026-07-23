@@ -21,6 +21,14 @@ export class Work {
   translation = inject(Translation);
   projects: Project[] = [
     {
+      title: 'Join',
+      tech: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
+      descriptionKey: 'workDescJoin',
+      image: 'img/join.png',
+      githubUrl: 'https://github.com/johi94/Join',
+      liveUrl: 'https://join.jonas-hildebrand.de/index.html',
+    },
+    {
       title: 'Pollo Loco',
       tech: ['JavaScript', 'HTML', 'CSS'],
       descriptionKey: 'workDescPollo',

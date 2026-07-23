@@ -23,6 +23,8 @@ const de = {
   titleWork: 'Meine Arbeiten',
   workSubtitle:
     'Entdecken Sie hier eine Auswahl meiner Arbeiten. Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.',
+  workDescJoin:
+    'Task-Manager nach dem Kanban-Prinzip. Erstellen und organisieren Sie Aufgaben per Drag-and-drop, weisen Sie Nutzern Aufgaben zu und behalten Sie den Überblick über den Fortschritt.',
   workDescPollo:
     'Jump-, Run- und Wurfspiel auf Basis objektorientierter Programmierung. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.',
   workDescPoke:
@@ -85,6 +87,8 @@ const translations: Record<Lang, Texts> = {
     titleWork: 'My work',
     workSubtitle:
       'Explore a selection of my work here. Interact with projects to see my skills in action.',
+    workDescJoin:
+      'Task manager inspired by the Kanban system. Create and organize tasks using drag and drop, assign users to tasks and keep track of their progress.',
     workDescPollo:
       'Jump, run and throw game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
     workDescPoke:
@@ -141,6 +145,8 @@ const translations: Record<Lang, Texts> = {
     titleWork: 'Mis trabajos',
     workSubtitle:
       'Descubra aquí una selección de mis trabajos. Interactúe con los proyectos para ver mis habilidades en acción.',
+    workDescJoin:
+      'Gestor de tareas basado en el sistema Kanban. Cree y organice tareas mediante arrastrar y soltar, asigne usuarios a las tareas y mantenga una visión general del progreso.',
     workDescPollo:
       'Juego de saltar, correr y lanzar basado en programación orientada a objetos. Ayude a Pepe a encontrar monedas y salsa de tabasco para luchar contra el pollo loco.',
     workDescPoke:
@@ -195,7 +201,7 @@ export class Translation {
     effect(() => {
       const lang = this.activeLang();
       localStorage.setItem('lang', lang);
-      document.documentElement.lang = lang.toLowerCase()
+      document.documentElement.lang = lang.toLowerCase();
     });
   }
 

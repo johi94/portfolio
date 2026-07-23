@@ -37,7 +37,7 @@
   &__item {
     @include flex($gap: space('xxl'));
     align-items: stretch;
-    &:nth-child(even) {
+    &:nth-child(odd) {
       flex-direction: row-reverse;
       text-align: right;
     }
@@ -46,7 +46,7 @@
       flex-direction: column;
       text-align: left;
       align-items: center;
-      &:nth-child(even) {
+      &:nth-child(odd) {
         flex-direction: column;
         text-align: left;
       }
@@ -103,7 +103,7 @@
     }
   }
 
-  &__item:nth-child(even) &__actions {
+  &__item:nth-child(odd) &__actions {
     justify-content: flex-end;
   }
 
