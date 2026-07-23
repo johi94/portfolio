@@ -128,9 +128,12 @@
   }
 
   &__circle--3 {
-    @include decorative-circle(clamp(rem(180px), 20dvw, rem(320px)));
-    top: 25%;
+    @include decorative-circle(clamp(rem(180px), 15dvw, rem(320px)));
+    top: 22%;
     left: 1%;
+    @include respond(tablet) {
+      top: 15%;
+    }
   }
 
   &__circle--4 {
