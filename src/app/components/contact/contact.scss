@@ -175,7 +175,7 @@
   &__circle--1 {
     @include decorative-circle(clamp(rem(80px), 10dvw, rem(130px)));
     top: rem(50px);
-    right: 20%;
+    right: 15%;
   }
 
   &__circle--2 {
