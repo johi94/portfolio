@@ -43,6 +43,8 @@
     @include respond(mobile) {
       margin-top: space('xxl');
       margin-bottom: space('xxs');
+      margin-right: space('xxs');
+      margin-left: space('xxs');
     }
   }
 
